@@ -1,0 +1,5 @@
+[console_scripts]
+arduino_to_ros = pc_serial_communication.arduino_to_ros:main
+cmd_vel_value = pc_serial_communication.cmd_vel_value:main
+imu_data = pc_serial_communication.imu_data:main
+serial_node = pc_serial_communication.serial_node:main

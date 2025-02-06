@@ -1,0 +1,7 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/motor_hardware_interface.dir/src/motor_hardware_interface.cpp.o[0m
+[01m[K/home/arnab/ros2_ws/src/custom_motor_hw/src/motor_hardware_interface.cpp:21:40:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KMotorHardwareInterface::[m[K’ on member ‘[01m[Kon_init[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+   21 |     hardware_interface::CallbackReturn [01;31m[KMotorHardwareInterface[m[K::on_init(const hardware_interface::HardwareInfo &info)
+      |                                        [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/motor_hardware_interface.dir/build.make:76: CMakeFiles/motor_hardware_interface.dir/src/motor_hardware_interface.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/motor_hardware_interface.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

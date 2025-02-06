@@ -1,0 +1,73 @@
+[0.411s] Invoking command in '/home/arnab/ros2_ws/build/test_bot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/arnab/ros2_ws/install/pc_serial_communication:/opt/ros/humble /usr/bin/cmake /home/arnab/ros2_ws/src/test_bot -DCMAKE_INSTALL_PREFIX=/home/arnab/ros2_ws/install/test_bot
+[0.445s] -- The C compiler identification is GNU 11.4.0
+[0.477s] -- The CXX compiler identification is GNU 11.4.0
+[0.481s] -- Detecting C compiler ABI info
+[0.521s] -- Detecting C compiler ABI info - done
+[0.525s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.525s] -- Detecting C compile features
+[0.525s] -- Detecting C compile features - done
+[0.527s] -- Detecting CXX compiler ABI info
+[0.574s] -- Detecting CXX compiler ABI info - done
+[0.578s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.578s] -- Detecting CXX compile features
+[0.578s] -- Detecting CXX compile features - done
+[0.580s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.902s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.950s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.993s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.003s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.004s] -- Configured cppcheck include dirs: 
+[1.004s] -- Configured cppcheck exclude dirs and/or files: 
+[1.016s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.017s] -- Configured cpplint exclude dirs and/or files: 
+[1.018s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.021s] -- Added test 'lint_cmake' to check CMake code style
+[1.023s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.040s] -- Added test 'uncrustify' to check C / C++ code style
+[1.041s] -- Configured uncrustify additional arguments: 
+[1.041s] -- Added test 'xmllint' to check XML markup files
+[1.041s] -- Configuring done
+[1.042s] -- Generating done
+[1.046s] -- Build files have been written to: /home/arnab/ros2_ws/build/test_bot
+[1.049s] Invoked command in '/home/arnab/ros2_ws/build/test_bot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/arnab/ros2_ws/install/pc_serial_communication:/opt/ros/humble /usr/bin/cmake /home/arnab/ros2_ws/src/test_bot -DCMAKE_INSTALL_PREFIX=/home/arnab/ros2_ws/install/test_bot
+[1.049s] Invoking command in '/home/arnab/ros2_ws/build/test_bot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/arnab/ros2_ws/install/pc_serial_communication:/opt/ros/humble /usr/bin/cmake --build /home/arnab/ros2_ws/build/test_bot -- -j16 -l16
+[3.201s] Invoked command in '/home/arnab/ros2_ws/build/test_bot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/arnab/ros2_ws/install/pc_serial_communication:/opt/ros/humble /usr/bin/cmake --build /home/arnab/ros2_ws/build/test_bot -- -j16 -l16
+[3.202s] Invoking command in '/home/arnab/ros2_ws/build/test_bot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/arnab/ros2_ws/install/pc_serial_communication:/opt/ros/humble /usr/bin/cmake --install /home/arnab/ros2_ws/build/test_bot
+[3.275s] -- Install configuration: ""
+[3.275s] -- Installing: /home/arnab/ros2_ws/install/test_bot/share/test_bot/config
+[3.275s] -- Installing: /home/arnab/ros2_ws/install/test_bot/share/test_bot/config/mapper_params_online_async.yaml
+[3.275s] -- Installing: /home/arnab/ros2_ws/install/test_bot/share/test_bot/config/gazebo_params.yaml
+[3.275s] -- Installing: /home/arnab/ros2_ws/install/test_bot/share/test_bot/config/my_controllers.yaml
+[3.276s] -- Installing: /home/arnab/ros2_ws/install/test_bot/share/test_bot/config/empty.yaml
+[3.276s] -- Installing: /home/arnab/ros2_ws/install/test_bot/share/test_bot/config/view_bot.rviz
+[3.276s] -- Installing: /home/arnab/ros2_ws/install/test_bot/share/test_bot/description
+[3.276s] -- Installing: /home/arnab/ros2_ws/install/test_bot/share/test_bot/description/robot.urdf.xacro
+[3.276s] -- Installing: /home/arnab/ros2_ws/install/test_bot/share/test_bot/description/depth_camera.xacro
+[3.276s] -- Installing: /home/arnab/ros2_ws/install/test_bot/share/test_bot/description/gazebo_control.xacro
+[3.276s] -- Installing: /home/arnab/ros2_ws/install/test_bot/share/test_bot/description/inertial_macros.xacro
+[3.276s] -- Installing: /home/arnab/ros2_ws/install/test_bot/share/test_bot/description/camera.xacro
+[3.276s] -- Installing: /home/arnab/ros2_ws/install/test_bot/share/test_bot/description/lidar.xacro
+[3.276s] -- Installing: /home/arnab/ros2_ws/install/test_bot/share/test_bot/description/ros2_control.xacro
+[3.276s] -- Installing: /home/arnab/ros2_ws/install/test_bot/share/test_bot/description/robot_core.xacro
+[3.276s] -- Installing: /home/arnab/ros2_ws/install/test_bot/share/test_bot/launch
+[3.276s] -- Installing: /home/arnab/ros2_ws/install/test_bot/share/test_bot/launch/launch_sim.launch.py
+[3.276s] -- Installing: /home/arnab/ros2_ws/install/test_bot/share/test_bot/launch/rsp.launch.py
+[3.276s] -- Installing: /home/arnab/ros2_ws/install/test_bot/share/test_bot/worlds
+[3.276s] -- Installing: /home/arnab/ros2_ws/install/test_bot/share/test_bot/worlds/empty.world
+[3.276s] -- Installing: /home/arnab/ros2_ws/install/test_bot/share/test_bot/worlds/test_world.world
+[3.276s] -- Installing: /home/arnab/ros2_ws/install/test_bot/share/ament_index/resource_index/package_run_dependencies/test_bot
+[3.276s] -- Installing: /home/arnab/ros2_ws/install/test_bot/share/ament_index/resource_index/parent_prefix_path/test_bot
+[3.276s] -- Installing: /home/arnab/ros2_ws/install/test_bot/share/test_bot/environment/ament_prefix_path.sh
+[3.276s] -- Installing: /home/arnab/ros2_ws/install/test_bot/share/test_bot/environment/ament_prefix_path.dsv
+[3.276s] -- Installing: /home/arnab/ros2_ws/install/test_bot/share/test_bot/environment/path.sh
+[3.276s] -- Installing: /home/arnab/ros2_ws/install/test_bot/share/test_bot/environment/path.dsv
+[3.276s] -- Installing: /home/arnab/ros2_ws/install/test_bot/share/test_bot/local_setup.bash
+[3.276s] -- Installing: /home/arnab/ros2_ws/install/test_bot/share/test_bot/local_setup.sh
+[3.276s] -- Installing: /home/arnab/ros2_ws/install/test_bot/share/test_bot/local_setup.zsh
+[3.276s] -- Installing: /home/arnab/ros2_ws/install/test_bot/share/test_bot/local_setup.dsv
+[3.276s] -- Installing: /home/arnab/ros2_ws/install/test_bot/share/test_bot/package.dsv
+[3.276s] -- Installing: /home/arnab/ros2_ws/install/test_bot/share/ament_index/resource_index/packages/test_bot
+[3.276s] -- Installing: /home/arnab/ros2_ws/install/test_bot/share/test_bot/cmake/test_botConfig.cmake
+[3.276s] -- Installing: /home/arnab/ros2_ws/install/test_bot/share/test_bot/cmake/test_botConfig-version.cmake
+[3.276s] -- Installing: /home/arnab/ros2_ws/install/test_bot/share/test_bot/package.xml
+[3.282s] Invoked command in '/home/arnab/ros2_ws/build/test_bot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/arnab/ros2_ws/install/pc_serial_communication:/opt/ros/humble /usr/bin/cmake --install /home/arnab/ros2_ws/build/test_bot

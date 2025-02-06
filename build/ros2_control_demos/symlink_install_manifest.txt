@@ -1,0 +1,15 @@
+/home/arnab/ros2_ws/install/ros2_control_demos/share/ament_index/resource_index/package_run_dependencies/ros2_control_demos
+/home/arnab/ros2_ws/install/ros2_control_demos/share/ament_index/resource_index/parent_prefix_path/ros2_control_demos
+/home/arnab/ros2_ws/install/ros2_control_demos/share/ros2_control_demos/environment/ament_prefix_path.sh
+/home/arnab/ros2_ws/install/ros2_control_demos/share/ros2_control_demos/environment/ament_prefix_path.dsv
+/home/arnab/ros2_ws/install/ros2_control_demos/share/ros2_control_demos/environment/path.sh
+/home/arnab/ros2_ws/install/ros2_control_demos/share/ros2_control_demos/environment/path.dsv
+/home/arnab/ros2_ws/install/ros2_control_demos/share/ros2_control_demos/local_setup.bash
+/home/arnab/ros2_ws/install/ros2_control_demos/share/ros2_control_demos/local_setup.sh
+/home/arnab/ros2_ws/install/ros2_control_demos/share/ros2_control_demos/local_setup.zsh
+/home/arnab/ros2_ws/install/ros2_control_demos/share/ros2_control_demos/local_setup.dsv
+/home/arnab/ros2_ws/install/ros2_control_demos/share/ros2_control_demos/package.dsv
+/home/arnab/ros2_ws/install/ros2_control_demos/share/ament_index/resource_index/packages/ros2_control_demos
+/home/arnab/ros2_ws/install/ros2_control_demos/share/ros2_control_demos/cmake/ros2_control_demosConfig.cmake
+/home/arnab/ros2_ws/install/ros2_control_demos/share/ros2_control_demos/cmake/ros2_control_demosConfig-version.cmake
+/home/arnab/ros2_ws/install/ros2_control_demos/share/ros2_control_demos/package.xml

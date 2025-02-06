@@ -1,0 +1,2 @@
+Invoking command in '/home/arnab/ros2_ws/build/serial': /usr/bin/cmake /home/arnab/ros2_ws/src/serial -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=/home/arnab/ros2_ws/install/serial
+Invoked command in '/home/arnab/ros2_ws/build/serial' returned '1': /usr/bin/cmake /home/arnab/ros2_ws/src/serial -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=/home/arnab/ros2_ws/install/serial

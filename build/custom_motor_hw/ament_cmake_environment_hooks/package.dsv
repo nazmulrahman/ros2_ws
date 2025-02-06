@@ -1,0 +1,4 @@
+source;share/custom_motor_hw/local_setup.bash
+source;share/custom_motor_hw/local_setup.dsv
+source;share/custom_motor_hw/local_setup.sh
+source;share/custom_motor_hw/local_setup.zsh

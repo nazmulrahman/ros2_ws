@@ -1,0 +1,5 @@
+<library path="libmotor_hardware_interface.so">
+    <class type="MotorHardwareInterface" base_class_type="hardware_interface::SystemInterface">
+        <description>Custom hardware interface for motor control</description>
+    </class>
+</library>

@@ -1,0 +1,1 @@
+[0.542s] Invoking command in '/home/arnab/ros2_ws/build/test_bot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/arnab/ros2_ws/install/ros2_control_demo_testing:/home/arnab/ros2_ws/install/pc_serial_communication:/home/arnab/ros2_ws/install/motor_serial_bridge:/opt/ros/humble /usr/bin/cmake --build /home/arnab/ros2_ws/build/test_bot -- -j16 -l16

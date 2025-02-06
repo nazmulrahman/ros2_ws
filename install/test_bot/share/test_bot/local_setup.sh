@@ -1,0 +1,1 @@
+/home/arnab/ros2_ws/build/test_bot/ament_cmake_environment_hooks/local_setup.sh

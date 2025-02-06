@@ -1,0 +1,20 @@
+[0.008s] Invoking command in '/home/arnab/ros2_ws/build/custom_motor_hw': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/arnab/ros2_ws/install/ros2_control_demo_testing:/home/arnab/ros2_ws/install/pc_serial_communication:/home/arnab/ros2_ws/install/motor_serial_bridge:/opt/ros/humble /usr/bin/cmake --build /home/arnab/ros2_ws/build/custom_motor_hw -- -j16 -l16
+[0.039s] [35m[1mConsolidate compiler generated dependencies of target motor_hardware_interface[0m
+[0.052s] [ 50%] [32mBuilding CXX object CMakeFiles/motor_hardware_interface.dir/src/motor_hardware_interface.cpp.o[0m
+[1.471s] In file included from [01m[K/usr/include/c++/11/memory:66[m[K,
+[1.472s]                  from [01m[K/opt/ros/humble/include/hardware_interface/system_interface.hpp:18[m[K,
+[1.472s]                  from [01m[K/home/arnab/ros2_ws/src/custom_motor_hw/src/motor_hardware_interface.cpp:1[m[K:
+[1.472s] /usr/include/c++/11/bits/stl_uninitialized.h: In instantiation of ‘[01m[K_ForwardIterator std::uninitialized_copy(_InputIterator, _InputIterator, _ForwardIterator) [with _InputIterator = const hardware_interface::CommandInterface*; _ForwardIterator = hardware_interface::CommandInterface*][m[K’:
+[1.472s] [01m[K/usr/include/c++/11/bits/stl_uninitialized.h:333:37:[m[K   required from ‘[01m[K_ForwardIterator std::__uninitialized_copy_a(_InputIterator, _InputIterator, _ForwardIterator, std::allocator<_Tp>&) [with _InputIterator = const hardware_interface::CommandInterface*; _ForwardIterator = hardware_interface::CommandInterface*; _Tp = hardware_interface::CommandInterface][m[K’
+[1.472s] [01m[K/usr/include/c++/11/bits/stl_vector.h:1585:33:[m[K   required from ‘[01m[Kvoid std::vector<_Tp, _Alloc>::_M_range_initialize(_ForwardIterator, _ForwardIterator, std::forward_iterator_tag) [with _ForwardIterator = const hardware_interface::CommandInterface*; _Tp = hardware_interface::CommandInterface; _Alloc = std::allocator<hardware_interface::CommandInterface>][m[K’
+[1.472s] [01m[K/usr/include/c++/11/bits/stl_vector.h:629:21:[m[K   required from ‘[01m[Kstd::vector<_Tp, _Alloc>::vector(std::initializer_list<_Tp>, const allocator_type&) [with _Tp = hardware_interface::CommandInterface; _Alloc = std::allocator<hardware_interface::CommandInterface>; std::vector<_Tp, _Alloc>::allocator_type = std::allocator<hardware_interface::CommandInterface>][m[K’
+[1.472s] [01m[K/home/arnab/ros2_ws/src/custom_motor_hw/src/motor_hardware_interface.cpp:62:9:[m[K   required from here
+[1.472s] [01m[K/usr/include/c++/11/bits/stl_uninitialized.h:138:72:[m[K [01;31m[Kerror: [m[Kstatic assertion failed: result type must be constructible from value type of input range
+[1.472s]   138 | static_assert(is_constructible<_ValueType2, decltype(*__first)>::[01;31m[Kvalue[m[K,
+[1.472s]       |                                                                  [01;31m[K^~~~~[m[K
+[1.472s] 
+[1.472s] [01m[K/usr/include/c++/11/bits/stl_uninitialized.h:138:72:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::integral_constant<bool, false>::value[m[K’ evaluates to false
+[1.587s] gmake[2]: *** [CMakeFiles/motor_hardware_interface.dir/build.make:76: CMakeFiles/motor_hardware_interface.dir/src/motor_hardware_interface.cpp.o] Error 1
+[1.587s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/motor_hardware_interface.dir/all] Error 2
+[1.587s] gmake: *** [Makefile:146: all] Error 2
+[1.589s] Invoked command in '/home/arnab/ros2_ws/build/custom_motor_hw' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/arnab/ros2_ws/install/ros2_control_demo_testing:/home/arnab/ros2_ws/install/pc_serial_communication:/home/arnab/ros2_ws/install/motor_serial_bridge:/opt/ros/humble /usr/bin/cmake --build /home/arnab/ros2_ws/build/custom_motor_hw -- -j16 -l16

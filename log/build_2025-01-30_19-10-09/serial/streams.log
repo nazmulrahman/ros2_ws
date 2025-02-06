@@ -1,0 +1,40 @@
+[0.554s] Invoking command in '/home/arnab/ros2_ws/build/serial': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/arnab/ros2_ws/install/ros2_control_demo_testing:/home/arnab/ros2_ws/install/pc_serial_communication:/home/arnab/ros2_ws/install/motor_serial_bridge:/opt/ros/humble /usr/bin/cmake --build /home/arnab/ros2_ws/build/serial -- -j16 -l16
+[0.583s] [35m[1mConsolidate compiler generated dependencies of target serial[0m
+[0.583s] [35m[1mConsolidate compiler generated dependencies of target gtest_main[0m
+[0.583s] [35m[1mConsolidate compiler generated dependencies of target gtest[0m
+[0.594s] [ 28%] Built target gtest
+[0.594s] [ 42%] Built target serial
+[0.594s] [ 57%] Built target gtest_main
+[0.602s] [35m[1mConsolidate compiler generated dependencies of target serial_example[0m
+[0.602s] [35m[1mConsolidate compiler generated dependencies of target serial-test[0m
+[0.602s] [35m[1mConsolidate compiler generated dependencies of target serial-test-timer[0m
+[0.612s] [ 85%] Built target serial-test
+[0.612s] [ 85%] Built target serial_example
+[0.612s] [100%] Built target serial-test-timer
+[0.621s] Invoked command in '/home/arnab/ros2_ws/build/serial' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/arnab/ros2_ws/install/ros2_control_demo_testing:/home/arnab/ros2_ws/install/pc_serial_communication:/home/arnab/ros2_ws/install/motor_serial_bridge:/opt/ros/humble /usr/bin/cmake --build /home/arnab/ros2_ws/build/serial -- -j16 -l16
+[0.621s] Invoking command in '/home/arnab/ros2_ws/build/serial': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/arnab/ros2_ws/install/ros2_control_demo_testing:/home/arnab/ros2_ws/install/pc_serial_communication:/home/arnab/ros2_ws/install/motor_serial_bridge:/opt/ros/humble /usr/bin/cmake --install /home/arnab/ros2_ws/build/serial
+[0.627s] -- Install configuration: ""
+[0.627s] -- Execute custom install script
+[0.628s] -- Symlinking: /home/arnab/ros2_ws/install/serial/lib/libserial.a
+[0.634s] -- Symlinking: /home/arnab/ros2_ws/install/serial/include/serial/serial.h
+[0.641s] -- Symlinking: /home/arnab/ros2_ws/install/serial/include/serial/v8stdint.h
+[0.648s] -- Symlinking: /home/arnab/ros2_ws/install/serial/share/serial/environment/library_path.sh
+[0.655s] -- Symlinking: /home/arnab/ros2_ws/install/serial/share/serial/environment/library_path.dsv
+[0.661s] -- Symlinking: /home/arnab/ros2_ws/install/serial/share/ament_index/resource_index/package_run_dependencies/serial
+[0.667s] -- Symlinking: /home/arnab/ros2_ws/install/serial/share/ament_index/resource_index/parent_prefix_path/serial
+[0.673s] -- Symlinking: /home/arnab/ros2_ws/install/serial/share/serial/environment/ament_prefix_path.sh
+[0.680s] -- Symlinking: /home/arnab/ros2_ws/install/serial/share/serial/environment/ament_prefix_path.dsv
+[0.687s] -- Symlinking: /home/arnab/ros2_ws/install/serial/share/serial/environment/path.sh
+[0.693s] -- Symlinking: /home/arnab/ros2_ws/install/serial/share/serial/environment/path.dsv
+[0.701s] -- Symlinking: /home/arnab/ros2_ws/install/serial/share/serial/local_setup.bash
+[0.708s] -- Symlinking: /home/arnab/ros2_ws/install/serial/share/serial/local_setup.sh
+[0.715s] -- Symlinking: /home/arnab/ros2_ws/install/serial/share/serial/local_setup.zsh
+[0.721s] -- Symlinking: /home/arnab/ros2_ws/install/serial/share/serial/local_setup.dsv
+[0.727s] -- Symlinking: /home/arnab/ros2_ws/install/serial/share/serial/package.dsv
+[0.733s] -- Symlinking: /home/arnab/ros2_ws/install/serial/share/ament_index/resource_index/packages/serial
+[0.740s] -- Symlinking: /home/arnab/ros2_ws/install/serial/share/serial/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.748s] -- Symlinking: /home/arnab/ros2_ws/install/serial/share/serial/cmake/ament_cmake_export_libraries-extras.cmake
+[0.756s] -- Symlinking: /home/arnab/ros2_ws/install/serial/share/serial/cmake/serialConfig.cmake
+[0.763s] -- Symlinking: /home/arnab/ros2_ws/install/serial/share/serial/cmake/serialConfig-version.cmake
+[0.770s] -- Symlinking: /home/arnab/ros2_ws/install/serial/share/serial/package.xml
+[0.779s] Invoked command in '/home/arnab/ros2_ws/build/serial' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/arnab/ros2_ws/install/ros2_control_demo_testing:/home/arnab/ros2_ws/install/pc_serial_communication:/home/arnab/ros2_ws/install/motor_serial_bridge:/opt/ros/humble /usr/bin/cmake --install /home/arnab/ros2_ws/build/serial

@@ -1,0 +1,35 @@
+[0.540s] Invoking command in '/home/arnab/ros2_ws/build/serial': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/arnab/ros2_ws/install/ros2_control_demo_testing:/home/arnab/ros2_ws/install/pc_serial_communication:/home/arnab/ros2_ws/install/motor_serial_bridge:/opt/ros/humble /usr/bin/cmake /home/arnab/ros2_ws/src/serial -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/arnab/ros2_ws/install/serial
+[0.548s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.620s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.625s] -- Found ament_cmake_gtest: 1.3.11 (/opt/ros/humble/share/ament_cmake_gtest/cmake)
+[0.628s] -- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[0.669s] -- Configuring done
+[0.676s] -- Generating done
+[0.679s] -- Build files have been written to: /home/arnab/ros2_ws/build/serial
+[0.681s] Invoked command in '/home/arnab/ros2_ws/build/serial' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/arnab/ros2_ws/install/ros2_control_demo_testing:/home/arnab/ros2_ws/install/pc_serial_communication:/home/arnab/ros2_ws/install/motor_serial_bridge:/opt/ros/humble /usr/bin/cmake /home/arnab/ros2_ws/src/serial -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/arnab/ros2_ws/install/serial
+[0.682s] Invoking command in '/home/arnab/ros2_ws/build/serial': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/arnab/ros2_ws/install/ros2_control_demo_testing:/home/arnab/ros2_ws/install/pc_serial_communication:/home/arnab/ros2_ws/install/motor_serial_bridge:/opt/ros/humble /usr/bin/cmake --build /home/arnab/ros2_ws/build/serial -- -j16 -l16
+[0.721s] [  7%] [32mBuilding CXX object CMakeFiles/serial.dir/src/serial.cc.o[0m
+[0.721s] [ 14%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[0.721s] [ 21%] [32mBuilding CXX object CMakeFiles/serial.dir/src/impl/unix.cc.o[0m
+[0.723s] [ 28%] [32mBuilding CXX object CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.o[0m
+[0.723s] [ 35%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[1.075s] [ 42%] [32m[1mLinking CXX static library libserial.a[0m
+[1.106s] [ 42%] Built target serial
+[1.123s] [ 50%] [32mBuilding CXX object CMakeFiles/serial_example.dir/examples/serial_example.cc.o[0m
+[1.249s] [ 57%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[1.278s] [ 57%] Built target gtest_main
+[1.305s] [ 64%] [32m[1mLinking CXX executable serial_example[0m
+[1.364s] [ 64%] Built target serial_example
+[3.173s] [ 71%] [32m[1mLinking CXX static library libgtest.a[0m
+[3.240s] [ 71%] Built target gtest
+[3.260s] [ 78%] [32mBuilding CXX object tests/CMakeFiles/serial-test-timer.dir/unit/unix_timer_tests.cc.o[0m
+[3.264s] [ 85%] [32mBuilding CXX object tests/CMakeFiles/serial-test.dir/unix_serial_tests.cc.o[0m
+[3.757s] In file included from [01m[K/usr/include/boost/bind.hpp:30[m[K,
+[3.757s]                  from [01m[K/home/arnab/ros2_ws/src/serial/tests/unix_serial_tests.cc:23[m[K:
+[3.757s] [01m[K/usr/include/boost/bind.hpp:36:1:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: The practice of declaring the Bind placeholders (_1, _2, ...) in the global namespace is deprecated. Please use <boost/bind/bind.hpp> + using namespace boost::placeholders, or define BOOST_BIND_GLOBAL_PLACEHOLDERS to retain the current behavior.[m[K’
+[3.757s]    36 | [01;36m[KBOOST_PRAGMA_MESSAGE[m[K(
+[3.757s]       | [01;36m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[3.801s] [ 92%] [32m[1mLinking CXX executable serial-test-timer[0m
+[3.873s] [100%] [32m[1mLinking CXX executable serial-test[0m
+[3.875s] [100%] Built target serial-test-timer
+[3.945s] [100%] Built target serial-test

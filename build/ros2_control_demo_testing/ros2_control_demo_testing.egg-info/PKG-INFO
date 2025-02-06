@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: ros2-control-demo-testing
+Version: 0.0.0
+Summary: Utilities for launch testing
+Maintainer: Christoph Froehlich
+Maintainer-email: christoph.froehlich@ait.ac.at
+License: Apache-2.0

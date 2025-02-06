@@ -1,0 +1,35 @@
+[0.707s] Invoking command in '/home/arnab/ros2_ws/src/ros2_control_demos/ros2_control_demo_testing': PYTHONPATH=/home/arnab/ros2_ws/build/ros2_control_demo_testing/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/arnab/ros2_ws/install/ros2_control_demo_testing/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/ros2_control_demo_testing build --build-base /home/arnab/ros2_ws/build/ros2_control_demo_testing/build install --record /home/arnab/ros2_ws/build/ros2_control_demo_testing/install.log --single-version-externally-managed install_data
+[0.876s] running egg_info
+[0.876s] creating ../../../build/ros2_control_demo_testing/ros2_control_demo_testing.egg-info
+[0.881s] writing ../../../build/ros2_control_demo_testing/ros2_control_demo_testing.egg-info/PKG-INFO
+[0.882s] writing dependency_links to ../../../build/ros2_control_demo_testing/ros2_control_demo_testing.egg-info/dependency_links.txt
+[0.882s] writing requirements to ../../../build/ros2_control_demo_testing/ros2_control_demo_testing.egg-info/requires.txt
+[0.882s] writing top-level names to ../../../build/ros2_control_demo_testing/ros2_control_demo_testing.egg-info/top_level.txt
+[0.882s] writing manifest file '../../../build/ros2_control_demo_testing/ros2_control_demo_testing.egg-info/SOURCES.txt'
+[0.900s] reading manifest file '../../../build/ros2_control_demo_testing/ros2_control_demo_testing.egg-info/SOURCES.txt'
+[0.900s] writing manifest file '../../../build/ros2_control_demo_testing/ros2_control_demo_testing.egg-info/SOURCES.txt'
+[0.900s] running build
+[0.901s] running build_py
+[0.901s] creating /home/arnab/ros2_ws/build/ros2_control_demo_testing/build
+[0.901s] creating /home/arnab/ros2_ws/build/ros2_control_demo_testing/build/lib
+[0.901s] creating /home/arnab/ros2_ws/build/ros2_control_demo_testing/build/lib/ros2_control_demo_testing
+[0.901s] copying ros2_control_demo_testing/__init__.py -> /home/arnab/ros2_ws/build/ros2_control_demo_testing/build/lib/ros2_control_demo_testing
+[0.901s] copying ros2_control_demo_testing/test_utils.py -> /home/arnab/ros2_ws/build/ros2_control_demo_testing/build/lib/ros2_control_demo_testing
+[0.901s] running install
+[0.903s] running install_lib
+[0.909s] creating /home/arnab/ros2_ws/install/ros2_control_demo_testing/lib/python3.10/site-packages/ros2_control_demo_testing
+[0.909s] copying /home/arnab/ros2_ws/build/ros2_control_demo_testing/build/lib/ros2_control_demo_testing/__init__.py -> /home/arnab/ros2_ws/install/ros2_control_demo_testing/lib/python3.10/site-packages/ros2_control_demo_testing
+[0.909s] copying /home/arnab/ros2_ws/build/ros2_control_demo_testing/build/lib/ros2_control_demo_testing/test_utils.py -> /home/arnab/ros2_ws/install/ros2_control_demo_testing/lib/python3.10/site-packages/ros2_control_demo_testing
+[0.910s] byte-compiling /home/arnab/ros2_ws/install/ros2_control_demo_testing/lib/python3.10/site-packages/ros2_control_demo_testing/__init__.py to __init__.cpython-310.pyc
+[0.910s] byte-compiling /home/arnab/ros2_ws/install/ros2_control_demo_testing/lib/python3.10/site-packages/ros2_control_demo_testing/test_utils.py to test_utils.cpython-310.pyc
+[0.910s] running install_data
+[0.910s] creating /home/arnab/ros2_ws/install/ros2_control_demo_testing/share/ament_index
+[0.910s] creating /home/arnab/ros2_ws/install/ros2_control_demo_testing/share/ament_index/resource_index
+[0.910s] creating /home/arnab/ros2_ws/install/ros2_control_demo_testing/share/ament_index/resource_index/packages
+[0.910s] copying resource/ros2_control_demo_testing -> /home/arnab/ros2_ws/install/ros2_control_demo_testing/share/ament_index/resource_index/packages
+[0.910s] copying package.xml -> /home/arnab/ros2_ws/install/ros2_control_demo_testing/share/ros2_control_demo_testing
+[0.910s] running install_egg_info
+[0.917s] Copying ../../../build/ros2_control_demo_testing/ros2_control_demo_testing.egg-info to /home/arnab/ros2_ws/install/ros2_control_demo_testing/lib/python3.10/site-packages/ros2_control_demo_testing-0.0.0-py3.10.egg-info
+[0.917s] running install_scripts
+[0.942s] writing list of installed files to '/home/arnab/ros2_ws/build/ros2_control_demo_testing/install.log'
+[0.967s] Invoked command in '/home/arnab/ros2_ws/src/ros2_control_demos/ros2_control_demo_testing' returned '0': PYTHONPATH=/home/arnab/ros2_ws/build/ros2_control_demo_testing/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/arnab/ros2_ws/install/ros2_control_demo_testing/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/ros2_control_demo_testing build --build-base /home/arnab/ros2_ws/build/ros2_control_demo_testing/build install --record /home/arnab/ros2_ws/build/ros2_control_demo_testing/install.log --single-version-externally-managed install_data
