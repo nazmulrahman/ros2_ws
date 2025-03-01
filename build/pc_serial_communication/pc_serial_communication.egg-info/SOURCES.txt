@@ -10,8 +10,9 @@ setup.py
 ../../build/pc_serial_communication/pc_serial_communication.egg-info/zip-safe
 pc_serial_communication/__init__.py
 pc_serial_communication/arduino_to_ros.py
+pc_serial_communication/bno055_reader.py
 pc_serial_communication/cmd_vel_value.py
-pc_serial_communication/imu_data.py
+pc_serial_communication/imu_publisher.py
 pc_serial_communication/serial_node.py
 resource/pc_serial_communication
 test/test_copyright.py

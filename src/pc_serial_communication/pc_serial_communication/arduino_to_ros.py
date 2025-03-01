@@ -7,7 +7,7 @@ class ArduinoReader(Node):
     def __init__(self):
         super().__init__('arduino_reader')
         self.publisher_ = self.create_publisher(Int32, 'arduino_data', 10)
-        self.serial_port = serial.Serial('/dev/ttyACM0', 9600, timeout=1)  # Adjust port as needed
+        self.serial_port = serial.Serial('/dev/ttyACM0', 115200, timeout=1)  # Adjust port as needed
         self.timer = self.create_timer(0.1, self.read_serial)  # Read every 100ms
 
     def read_serial(self):

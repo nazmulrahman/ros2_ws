@@ -9,6 +9,8 @@ setup.py
 ../../build/motor_serial_bridge/motor_serial_bridge.egg-info/top_level.txt
 ../../build/motor_serial_bridge/motor_serial_bridge.egg-info/zip-safe
 motor_serial_bridge/__init__.py
+motor_serial_bridge/cmd_to_serial.py
+motor_serial_bridge/cmd_to_serial_and_odom.py
 motor_serial_bridge/motor_bridge_node.py
 resource/motor_serial_bridge
 test/test_copyright.py

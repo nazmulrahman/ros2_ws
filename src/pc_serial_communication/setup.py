@@ -23,7 +23,7 @@ setup(
             'serial_node = pc_serial_communication.serial_node:main',
             'cmd_vel_value = pc_serial_communication.cmd_vel_value:main',
             'arduino_to_ros = pc_serial_communication.arduino_to_ros:main',
-            'imu_data = pc_serial_communication.imu_data:main',
-        ],
+            'imu_publisher = pc_serial_communication.imu_publisher:main',
+            'bno055_reader = pc_serial_communication.bno055_reader:main',        ],
     },
 )

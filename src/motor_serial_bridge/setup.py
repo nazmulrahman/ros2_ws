@@ -20,7 +20,9 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'motor_bridge_node = motor_serial_bridge.motor_bridge_node:main'
+            'motor_bridge_node = motor_serial_bridge.motor_bridge_node:main',
+            'cmd_to_serial = motor_serial_bridge.cmd_to_serial:main',
+            'cmd_to_serial_and_odom = motor_serial_bridge.cmd_to_serial_and_odom:main',
         ],
     },
 )
