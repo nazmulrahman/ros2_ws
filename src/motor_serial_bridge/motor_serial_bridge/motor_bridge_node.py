@@ -5,7 +5,7 @@ from rclpy.node import Node
 import serial
 import time
 
-# If your 'cmd_vel_unstamped' is a geometry_msgs/Twist-like message,
+# If your 'cmd_vel' is a geometry_msgs/Twist-like message,
 # import the correct message type:
 from geometry_msgs.msg import Twist
 
@@ -14,9 +14,9 @@ class MotorBridgeNode(Node):
         super().__init__('motor_bridge_node')
 
         # Params (you can make these ROS2 parameters in real code)
-        self.declare_parameter('serial_port', '/dev/ttyACM0')  # or 'COM3' on Windows
+        self.declare_parameter('serial_port', '/dev/ttyACM0')  
         self.declare_parameter('baud_rate', 9600)
-        self.declare_parameter('max_speed_pwm', 255)  # L298N: 0-255
+        self.declare_parameter('max_speed_pwm', 255)  
 
         serial_port = self.get_parameter('serial_port').value
         baud_rate = self.get_parameter('baud_rate').value
@@ -30,11 +30,11 @@ class MotorBridgeNode(Node):
             self.get_logger().error(f"Could not open serial port {serial_port}")
             self.ser = None
 
-        # Subscribe to the diff_cont/cmd_vel_unstamped topic
+        # Subscribe to the /cmd_vel topic
         # Adjust the topic name or message type if needed
         self.subscription = self.create_subscription(
             Twist,
-            'diff_cont/cmd_vel_unstamped',
+            'cmd_vel',
             self.cmd_vel_callback,
             10
         )

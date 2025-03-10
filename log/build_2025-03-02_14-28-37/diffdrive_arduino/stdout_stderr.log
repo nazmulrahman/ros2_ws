@@ -1,0 +1,17 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/diffdrive_arduino.dir/hardware/diffbot_system.cpp.o[0m
+[01m[K/home/arnab/ros2_ws/src/diffdrive_arduino/hardware/diffbot_system.cpp:[m[K In member function ‘[01m[Kvirtual hardware_interface::return_type diffdrive_arduino::DiffDriveArduinoHardware::read(const rclcpp::Time&, const rclcpp::Duration&)[m[K’:
+[01m[K/home/arnab/ros2_ws/src/diffdrive_arduino/hardware/diffbot_system.cpp:225:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kleft_wheel_velocity_[m[K’ was not declared in this scope
+  225 |   [01;31m[Kleft_wheel_velocity_[m[K = left_wheel_speed_cmd_;
+      |   [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arnab/ros2_ws/src/diffdrive_arduino/hardware/diffbot_system.cpp:225:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kleft_wheel_speed_cmd_[m[K’ was not declared in this scope
+  225 |   left_wheel_velocity_ = [01;31m[Kleft_wheel_speed_cmd_[m[K;
+      |                          [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arnab/ros2_ws/src/diffdrive_arduino/hardware/diffbot_system.cpp:226:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kright_wheel_velocity_[m[K’ was not declared in this scope
+  226 |   [01;31m[Kright_wheel_velocity_[m[K = right_wheel_speed_cmd_;
+      |   [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arnab/ros2_ws/src/diffdrive_arduino/hardware/diffbot_system.cpp:226:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kright_wheel_speed_cmd_[m[K’ was not declared in this scope
+  226 |   right_wheel_velocity_ = [01;31m[Kright_wheel_speed_cmd_[m[K;
+      |                           [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/diffdrive_arduino.dir/build.make:76: CMakeFiles/diffdrive_arduino.dir/hardware/diffbot_system.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/diffdrive_arduino.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

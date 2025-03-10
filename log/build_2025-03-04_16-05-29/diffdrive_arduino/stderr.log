@@ -1,0 +1,11 @@
+[01m[K/home/arnab/ros2_ws/src/diffdrive_arduino/hardware/diffbot_system.cpp:[m[K In member function ‘[01m[Kvirtual hardware_interface::return_type diffdrive_arduino::DiffDriveArduinoHardware::read(const rclcpp::Time&, const rclcpp::Duration&)[m[K’:
+[01m[K/home/arnab/ros2_ws/src/diffdrive_arduino/hardware/diffbot_system.cpp:247:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass ArduinoComms[m[K’ has no member named ‘[01m[Kreceive_response[m[K’
+  247 |     comms_.[01;31m[Kreceive_response[m[K(response);
+      |            [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arnab/ros2_ws/src/diffdrive_arduino/hardware/diffbot_system.cpp:[m[K In member function ‘[01m[Kvirtual hardware_interface::return_type diffdrive_arduino::DiffDriveArduinoHardware::write(const rclcpp::Time&, const rclcpp::Duration&)[m[K’:
+[01m[K/home/arnab/ros2_ws/src/diffdrive_arduino/hardware/diffbot_system.cpp:280:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass ArduinoComms[m[K’ has no member named ‘[01m[Ksend_command[m[K’
+  280 |     comms_.[01;31m[Ksend_command[m[K(command.str());
+      |            [01;31m[K^~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/diffdrive_arduino.dir/build.make:76: CMakeFiles/diffdrive_arduino.dir/hardware/diffbot_system.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/diffdrive_arduino.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

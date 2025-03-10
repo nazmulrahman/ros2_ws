@@ -9,5 +9,9 @@
         "/opt/ros/humble/lib/python3.10/site-packages",
         "/opt/ros/humble/local/lib/python3.10/dist-packages"
     ],
-    "cmake.sourceDirectory": "/home/arnab/ros2_ws/src/test_bot"
+    "cmake.sourceDirectory": "/home/arnab/ros2_ws/src/test_bot",
+    "files.associations": {
+        "sstream": "cpp",
+        "regex": "cpp"
+    }
 }

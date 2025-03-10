@@ -1,0 +1,22 @@
+[01m[K/home/arnab/ros2_ws/src/diffdrive_arduino/hardware/diffbot_system.cpp:[m[K In member function ‘[01m[Kvirtual hardware_interface::CallbackReturn diffdrive_arduino::DiffDriveArduinoHardware::on_init(const hardware_interface::HardwareInfo&)[m[K’:
+[01m[K/home/arnab/ros2_ws/src/diffdrive_arduino/hardware/diffbot_system.cpp:28:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass diffdrive_arduino::DiffDriveArduinoHardware[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+   28 |     RCLCPP_FATAL(this->[01;31m[Kget_logger[m[K(), "Missing required parameter: %s", e.what());
+      |                        [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/arnab/ros2_ws/src/diffdrive_arduino/hardware/diffbot_system.cpp:28:5:[m[K [01;31m[Kerror: [m[K‘[01m[KRCLCPP_FATAL[m[K’ was not declared in this scope; did you mean ‘[01m[KRCLCPP_LOCAL[m[K’?
+   28 |     [01;31m[KRCLCPP_FATAL[m[K(this->get_logger(), "Missing required parameter: %s", e.what());
+      |     [01;31m[K^~~~~~~~~~~~[m[K
+      |     [32m[KRCLCPP_LOCAL[m[K
+[01m[K/home/arnab/ros2_ws/src/diffdrive_arduino/hardware/diffbot_system.cpp:[m[K In member function ‘[01m[Kvirtual hardware_interface::return_type diffdrive_arduino::DiffDriveArduinoHardware::write(const rclcpp::Time&, const rclcpp::Duration&)[m[K’:
+[01m[K/home/arnab/ros2_ws/src/diffdrive_arduino/hardware/diffbot_system.cpp:85:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass ArduinoComms[m[K’ has no member named ‘[01m[Kwrite[m[K’
+   85 |   if (!comms_.[01;31m[Kwrite[m[K(command.str()))  // Replacing send_command() with write()
+      |               [01;31m[K^~~~~[m[K
+[01m[K/home/arnab/ros2_ws/src/diffdrive_arduino/hardware/diffbot_system.cpp:87:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass diffdrive_arduino::DiffDriveArduinoHardware[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+   87 |     RCLCPP_ERROR(this->[01;31m[Kget_logger[m[K(), "Failed to send command to Arduino.");
+      |                        [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/arnab/ros2_ws/src/diffdrive_arduino/hardware/diffbot_system.cpp:87:5:[m[K [01;31m[Kerror: [m[K‘[01m[KRCLCPP_ERROR[m[K’ was not declared in this scope; did you mean ‘[01m[KRCLCPP_EXPORT[m[K’?
+   87 |     [01;31m[KRCLCPP_ERROR[m[K(this->get_logger(), "Failed to send command to Arduino.");
+      |     [01;31m[K^~~~~~~~~~~~[m[K
+      |     [32m[KRCLCPP_EXPORT[m[K
+gmake[2]: *** [CMakeFiles/diffdrive_arduino.dir/build.make:76: CMakeFiles/diffdrive_arduino.dir/hardware/diffbot_system.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/diffdrive_arduino.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

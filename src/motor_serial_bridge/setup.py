@@ -23,6 +23,7 @@ setup(
             'motor_bridge_node = motor_serial_bridge.motor_bridge_node:main',
             'cmd_to_serial = motor_serial_bridge.cmd_to_serial:main',
             'cmd_to_serial_and_odom = motor_serial_bridge.cmd_to_serial_and_odom:main',
+            'all_direction = motor_serial_bridge.all_direction:main',
         ],
     },
 )

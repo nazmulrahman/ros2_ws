@@ -1,0 +1,19 @@
+running develop
+running egg_info
+writing motor_serial_bridge.egg-info/PKG-INFO
+writing dependency_links to motor_serial_bridge.egg-info/dependency_links.txt
+writing entry points to motor_serial_bridge.egg-info/entry_points.txt
+writing requirements to motor_serial_bridge.egg-info/requires.txt
+writing top-level names to motor_serial_bridge.egg-info/top_level.txt
+reading manifest file 'motor_serial_bridge.egg-info/SOURCES.txt'
+writing manifest file 'motor_serial_bridge.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/arnab/ros2_ws/install/motor_serial_bridge/lib/python3.10/site-packages/motor-serial-bridge.egg-link (link to .)
+Installing cmd_to_serial script to /home/arnab/ros2_ws/install/motor_serial_bridge/lib/motor_serial_bridge
+Installing cmd_to_serial_and_odom script to /home/arnab/ros2_ws/install/motor_serial_bridge/lib/motor_serial_bridge
+Installing motor_bridge_node script to /home/arnab/ros2_ws/install/motor_serial_bridge/lib/motor_serial_bridge
+
+Installed /home/arnab/ros2_ws/build/motor_serial_bridge
+running symlink_data
+symbolically linking /home/arnab/ros2_ws/build/motor_serial_bridge/resource/motor_serial_bridge -> /home/arnab/ros2_ws/install/motor_serial_bridge/share/ament_index/resource_index/packages
+symbolically linking /home/arnab/ros2_ws/build/motor_serial_bridge/package.xml -> /home/arnab/ros2_ws/install/motor_serial_bridge/share/motor_serial_bridge

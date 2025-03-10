@@ -1,0 +1,19 @@
+[0.952s] Invoking command in '/home/arnab/ros2_ws/src/ros2_control_demos/ros2_control_demo_testing': PYTHONPATH=/home/arnab/ros2_ws/build/ros2_control_demo_testing/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/arnab/ros2_ws/install/ros2_control_demo_testing/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/ros2_control_demo_testing build --build-base /home/arnab/ros2_ws/build/ros2_control_demo_testing/build install --record /home/arnab/ros2_ws/build/ros2_control_demo_testing/install.log --single-version-externally-managed install_data
+[1.139s] running egg_info
+[1.154s] writing ../../../build/ros2_control_demo_testing/ros2_control_demo_testing.egg-info/PKG-INFO
+[1.154s] writing dependency_links to ../../../build/ros2_control_demo_testing/ros2_control_demo_testing.egg-info/dependency_links.txt
+[1.154s] writing requirements to ../../../build/ros2_control_demo_testing/ros2_control_demo_testing.egg-info/requires.txt
+[1.154s] writing top-level names to ../../../build/ros2_control_demo_testing/ros2_control_demo_testing.egg-info/top_level.txt
+[1.168s] reading manifest file '../../../build/ros2_control_demo_testing/ros2_control_demo_testing.egg-info/SOURCES.txt'
+[1.168s] writing manifest file '../../../build/ros2_control_demo_testing/ros2_control_demo_testing.egg-info/SOURCES.txt'
+[1.168s] running build
+[1.168s] running build_py
+[1.168s] running install
+[1.171s] running install_lib
+[1.178s] running install_data
+[1.178s] running install_egg_info
+[1.185s] removing '/home/arnab/ros2_ws/install/ros2_control_demo_testing/lib/python3.10/site-packages/ros2_control_demo_testing-0.0.0-py3.10.egg-info' (and everything under it)
+[1.185s] Copying ../../../build/ros2_control_demo_testing/ros2_control_demo_testing.egg-info to /home/arnab/ros2_ws/install/ros2_control_demo_testing/lib/python3.10/site-packages/ros2_control_demo_testing-0.0.0-py3.10.egg-info
+[1.185s] running install_scripts
+[1.214s] writing list of installed files to '/home/arnab/ros2_ws/build/ros2_control_demo_testing/install.log'
+[1.245s] Invoked command in '/home/arnab/ros2_ws/src/ros2_control_demos/ros2_control_demo_testing' returned '0': PYTHONPATH=/home/arnab/ros2_ws/build/ros2_control_demo_testing/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/arnab/ros2_ws/install/ros2_control_demo_testing/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/ros2_control_demo_testing build --build-base /home/arnab/ros2_ws/build/ros2_control_demo_testing/build install --record /home/arnab/ros2_ws/build/ros2_control_demo_testing/install.log --single-version-externally-managed install_data

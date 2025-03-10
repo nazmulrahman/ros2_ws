@@ -5,6 +5,8 @@ from rclpy.node import Node
 import serial
 import time
 from geometry_msgs.msg import Twist
+from nav_msgs.msg import Odometry
+import math
 
 class CmdToSerialNode(Node):
     def __init__(self):
@@ -30,6 +32,18 @@ class CmdToSerialNode(Node):
             10
         )
 
+        # Publish odometry
+        self.odom_publisher = self.create_publisher(Odometry, 'odom', 10)
+
+        # Initialize position & time
+        self.x = 0.0
+        self.y = 0.0
+        self.theta = 0.0
+        self.last_time = time.time()
+
+        # Start a timer to read encoder feedback
+        self.create_timer(0.1, self.read_encoder_feedback)  # 10Hz
+
     def cmd_vel_callback(self, msg):
         if self.ser is None:
             return
@@ -37,23 +51,6 @@ class CmdToSerialNode(Node):
         # Extract linear and angular values
         lx = msg.linear.x
         az = msg.angular.z
-
-
-
-        # Key Mapping for Arduino Commands
-# ______________________________________________________________________________________
-# | Key  | Meaning         | Published `Twist` Message    | Send to Arduino (int value) |
-# |------|-----------------|------------------------------|-----------------------------|
-# | `i`  | Move Forward    | linear.x > 0, angular.z = 0  |  1                          |
-# | `,`  | Move Backward   | linear.x < 0, angular.z = 0  | -1                          |
-# | `j`  | Turn Left       | linear.x = 0, angular.z > 0  | -2                          |
-# | `l`  | Turn Right      | linear.x = 0, angular.z < 0  |  2                          |
-# | `u`  | Forward + Left  | linear.x > 0, angular.z > 0  |  4                          |
-# | `o`  | Forward + Right | linear.x > 0, angular.z < 0  |  3                          |
-# | `m`  | Backward + Left | linear.x < 0, angular.z > 0  | -3                          |
-# | `.`  | Backward + Right| linear.x < 0, angular.z < 0  | -4                          |
-# | `k`  | Stop            | linear.x = 0, angular.z = 0  |  0                          |
-# |________________________|______________________________|_____________________________|
 
         # Mapping Twist values to integer commands for Arduino
         command = 0  # Default: Stop
@@ -81,6 +78,40 @@ class CmdToSerialNode(Node):
             self.get_logger().info(f"Sent command: {command}")
         except Exception as e:
             self.get_logger().error(f"Serial write failed: {e}")
+
+    def read_encoder_feedback(self):
+        if self.ser is None:
+            return
+        
+        try:
+            data = self.ser.readline().decode('utf-8').strip()
+            if data.startswith("SpeedL:"):
+                parts = data.split(',')
+                speedL = float(parts[0].split(':')[1])
+                speedR = float(parts[1].split(':')[1])
+
+                # Compute robot movement
+                dt = time.time() - self.last_time
+                self.last_time = time.time()
+                vx = (speedL + speedR) / 2.0
+                vth = (speedR - speedL) / 0.35  # Adjust with wheel separation
+
+                self.x += vx * math.cos(self.theta) * dt
+                self.y += vx * math.sin(self.theta) * dt
+                self.theta += vth * dt
+
+                # Publish Odometry
+                odom_msg = Odometry()
+                odom_msg.pose.pose.position.x = self.x
+                odom_msg.pose.pose.position.y = self.y
+                odom_msg.twist.twist.linear.x = vx
+                odom_msg.twist.twist.angular.z = vth
+                self.odom_publisher.publish(odom_msg)
+
+                self.get_logger().info(f"Odometry -> X: {self.x:.2f}, Y: {self.y:.2f}, Theta: {self.theta:.2f}")
+        
+        except Exception as e:
+            self.get_logger().error(f"Failed to read encoder: {e}")
 
 def main(args=None):
     rclpy.init(args=args)

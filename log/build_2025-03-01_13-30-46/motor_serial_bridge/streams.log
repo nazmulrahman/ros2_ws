@@ -1,0 +1,26 @@
+[1.042s] Invoking command in '/home/arnab/ros2_ws/src/motor_serial_bridge': PYTHONPATH=/home/arnab/ros2_ws/build/motor_serial_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/arnab/ros2_ws/install/motor_serial_bridge/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/motor_serial_bridge build --build-base /home/arnab/ros2_ws/build/motor_serial_bridge/build install --record /home/arnab/ros2_ws/build/motor_serial_bridge/install.log --single-version-externally-managed install_data
+[1.230s] running egg_info
+[1.246s] writing ../../build/motor_serial_bridge/motor_serial_bridge.egg-info/PKG-INFO
+[1.246s] writing dependency_links to ../../build/motor_serial_bridge/motor_serial_bridge.egg-info/dependency_links.txt
+[1.246s] writing entry points to ../../build/motor_serial_bridge/motor_serial_bridge.egg-info/entry_points.txt
+[1.246s] writing requirements to ../../build/motor_serial_bridge/motor_serial_bridge.egg-info/requires.txt
+[1.246s] writing top-level names to ../../build/motor_serial_bridge/motor_serial_bridge.egg-info/top_level.txt
+[1.260s] reading manifest file '../../build/motor_serial_bridge/motor_serial_bridge.egg-info/SOURCES.txt'
+[1.260s] writing manifest file '../../build/motor_serial_bridge/motor_serial_bridge.egg-info/SOURCES.txt'
+[1.260s] running build
+[1.260s] running build_py
+[1.260s] copying motor_serial_bridge/cmd_to_serial.py -> /home/arnab/ros2_ws/build/motor_serial_bridge/build/lib/motor_serial_bridge
+[1.260s] running install
+[1.263s] running install_lib
+[1.270s] copying /home/arnab/ros2_ws/build/motor_serial_bridge/build/lib/motor_serial_bridge/cmd_to_serial.py -> /home/arnab/ros2_ws/install/motor_serial_bridge/lib/python3.10/site-packages/motor_serial_bridge
+[1.270s] byte-compiling /home/arnab/ros2_ws/install/motor_serial_bridge/lib/python3.10/site-packages/motor_serial_bridge/cmd_to_serial.py to cmd_to_serial.cpython-310.pyc
+[1.271s] running install_data
+[1.271s] running install_egg_info
+[1.278s] removing '/home/arnab/ros2_ws/install/motor_serial_bridge/lib/python3.10/site-packages/motor_serial_bridge-0.0.0-py3.10.egg-info' (and everything under it)
+[1.278s] Copying ../../build/motor_serial_bridge/motor_serial_bridge.egg-info to /home/arnab/ros2_ws/install/motor_serial_bridge/lib/python3.10/site-packages/motor_serial_bridge-0.0.0-py3.10.egg-info
+[1.280s] running install_scripts
+[1.309s] Installing cmd_to_serial script to /home/arnab/ros2_ws/install/motor_serial_bridge/lib/motor_serial_bridge
+[1.309s] Installing cmd_to_serial_and_odom script to /home/arnab/ros2_ws/install/motor_serial_bridge/lib/motor_serial_bridge
+[1.309s] Installing motor_bridge_node script to /home/arnab/ros2_ws/install/motor_serial_bridge/lib/motor_serial_bridge
+[1.310s] writing list of installed files to '/home/arnab/ros2_ws/build/motor_serial_bridge/install.log'
+[1.375s] Invoked command in '/home/arnab/ros2_ws/src/motor_serial_bridge' returned '0': PYTHONPATH=/home/arnab/ros2_ws/build/motor_serial_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/arnab/ros2_ws/install/motor_serial_bridge/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/motor_serial_bridge build --build-base /home/arnab/ros2_ws/build/motor_serial_bridge/build install --record /home/arnab/ros2_ws/build/motor_serial_bridge/install.log --single-version-externally-managed install_data

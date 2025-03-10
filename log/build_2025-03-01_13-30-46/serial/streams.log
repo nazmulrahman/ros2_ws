@@ -1,0 +1,53 @@
+[0.612s] Invoking command in '/home/arnab/ros2_ws/build/serial': CMAKE_PREFIX_PATH=/home/arnab/ros2_ws/install/test_bot:/home/arnab/ros2_ws/install/ros2_control_demo_testing:/home/arnab/ros2_ws/install/pc_serial_communication:/home/arnab/ros2_ws/install/motor_serial_bridge:/opt/ros/humble:/home/arnab/ros2_ws/install/serial:/home/arnab/ros2_ws/install/ros2_control_demos:/home/arnab/ros2_ws/install/ros2_control_demo_example_9:/home/arnab/ros2_ws/install/ros2_control_demo_example_8:/home/arnab/ros2_ws/install/ros2_control_demo_example_7:/home/arnab/ros2_ws/install/ros2_control_demo_example_6:/home/arnab/ros2_ws/install/ros2_control_demo_example_15:/home/arnab/ros2_ws/install/ros2_control_demo_example_13:/home/arnab/ros2_ws/install/ros2_control_demo_example_5:/home/arnab/ros2_ws/install/ros2_control_demo_example_4:/home/arnab/ros2_ws/install/ros2_control_demo_example_3:/home/arnab/ros2_ws/install/ros2_control_demo_example_2:/home/arnab/ros2_ws/install/ros2_control_demo_example_14:/home/arnab/ros2_ws/install/ros2_control_demo_example_12:/home/arnab/ros2_ws/install/ros2_control_demo_example_11:/home/arnab/ros2_ws/install/ros2_control_demo_example_10:/home/arnab/ros2_ws/install/ros2_control_demo_example_1:/home/arnab/ros2_ws/install/ros2_control_demo_description:/home/arnab/ros2_ws/install/diffdrive_arduino:/home/arnab/ros2_ws/install/custom_motor_hw:/home/arnab/ros2_ws/install/articubot_one /usr/bin/cmake --build /home/arnab/ros2_ws/build/serial -- -j16 -l16
+[0.651s] [ 14%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[0.651s] [ 14%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[0.652s] [ 21%] [32mBuilding CXX object CMakeFiles/serial.dir/src/impl/unix.cc.o[0m
+[0.652s] [ 28%] [32mBuilding CXX object CMakeFiles/serial.dir/src/impl/list_ports/list_ports_linux.cc.o[0m
+[0.652s] [ 35%] [32mBuilding CXX object CMakeFiles/serial.dir/src/serial.cc.o[0m
+[0.942s] [ 42%] [32m[1mLinking CXX static library libserial.a[0m
+[0.973s] [ 42%] Built target serial
+[0.992s] [ 50%] [32mBuilding CXX object CMakeFiles/serial_example.dir/examples/serial_example.cc.o[0m
+[1.153s] [ 57%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[1.163s] [ 64%] [32m[1mLinking CXX executable serial_example[0m
+[1.179s] [ 64%] Built target gtest_main
+[1.223s] [ 64%] Built target serial_example
+[2.326s] [ 71%] [32m[1mLinking CXX static library libgtest.a[0m
+[2.371s] [ 71%] Built target gtest
+[2.391s] [ 85%] [32mBuilding CXX object tests/CMakeFiles/serial-test-timer.dir/unit/unix_timer_tests.cc.o[0m
+[2.391s] [ 85%] [32mBuilding CXX object tests/CMakeFiles/serial-test.dir/unix_serial_tests.cc.o[0m
+[2.810s] In file included from [01m[K/usr/include/boost/bind.hpp:30[m[K,
+[2.810s]                  from [01m[K/home/arnab/ros2_ws/src/serial/tests/unix_serial_tests.cc:23[m[K:
+[2.810s] [01m[K/usr/include/boost/bind.hpp:36:1:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: The practice of declaring the Bind placeholders (_1, _2, ...) in the global namespace is deprecated. Please use <boost/bind/bind.hpp> + using namespace boost::placeholders, or define BOOST_BIND_GLOBAL_PLACEHOLDERS to retain the current behavior.[m[K’
+[2.810s]    36 | [01;36m[KBOOST_PRAGMA_MESSAGE[m[K(
+[2.811s]       | [01;36m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[2.856s] [ 92%] [32m[1mLinking CXX executable serial-test-timer[0m
+[2.922s] [100%] [32m[1mLinking CXX executable serial-test[0m
+[2.932s] [100%] Built target serial-test-timer
+[2.995s] [100%] Built target serial-test
+[3.004s] Invoked command in '/home/arnab/ros2_ws/build/serial' returned '0': CMAKE_PREFIX_PATH=/home/arnab/ros2_ws/install/test_bot:/home/arnab/ros2_ws/install/ros2_control_demo_testing:/home/arnab/ros2_ws/install/pc_serial_communication:/home/arnab/ros2_ws/install/motor_serial_bridge:/opt/ros/humble:/home/arnab/ros2_ws/install/serial:/home/arnab/ros2_ws/install/ros2_control_demos:/home/arnab/ros2_ws/install/ros2_control_demo_example_9:/home/arnab/ros2_ws/install/ros2_control_demo_example_8:/home/arnab/ros2_ws/install/ros2_control_demo_example_7:/home/arnab/ros2_ws/install/ros2_control_demo_example_6:/home/arnab/ros2_ws/install/ros2_control_demo_example_15:/home/arnab/ros2_ws/install/ros2_control_demo_example_13:/home/arnab/ros2_ws/install/ros2_control_demo_example_5:/home/arnab/ros2_ws/install/ros2_control_demo_example_4:/home/arnab/ros2_ws/install/ros2_control_demo_example_3:/home/arnab/ros2_ws/install/ros2_control_demo_example_2:/home/arnab/ros2_ws/install/ros2_control_demo_example_14:/home/arnab/ros2_ws/install/ros2_control_demo_example_12:/home/arnab/ros2_ws/install/ros2_control_demo_example_11:/home/arnab/ros2_ws/install/ros2_control_demo_example_10:/home/arnab/ros2_ws/install/ros2_control_demo_example_1:/home/arnab/ros2_ws/install/ros2_control_demo_description:/home/arnab/ros2_ws/install/diffdrive_arduino:/home/arnab/ros2_ws/install/custom_motor_hw:/home/arnab/ros2_ws/install/articubot_one /usr/bin/cmake --build /home/arnab/ros2_ws/build/serial -- -j16 -l16
+[3.005s] Invoking command in '/home/arnab/ros2_ws/build/serial': CMAKE_PREFIX_PATH=/home/arnab/ros2_ws/install/test_bot:/home/arnab/ros2_ws/install/ros2_control_demo_testing:/home/arnab/ros2_ws/install/pc_serial_communication:/home/arnab/ros2_ws/install/motor_serial_bridge:/opt/ros/humble:/home/arnab/ros2_ws/install/serial:/home/arnab/ros2_ws/install/ros2_control_demos:/home/arnab/ros2_ws/install/ros2_control_demo_example_9:/home/arnab/ros2_ws/install/ros2_control_demo_example_8:/home/arnab/ros2_ws/install/ros2_control_demo_example_7:/home/arnab/ros2_ws/install/ros2_control_demo_example_6:/home/arnab/ros2_ws/install/ros2_control_demo_example_15:/home/arnab/ros2_ws/install/ros2_control_demo_example_13:/home/arnab/ros2_ws/install/ros2_control_demo_example_5:/home/arnab/ros2_ws/install/ros2_control_demo_example_4:/home/arnab/ros2_ws/install/ros2_control_demo_example_3:/home/arnab/ros2_ws/install/ros2_control_demo_example_2:/home/arnab/ros2_ws/install/ros2_control_demo_example_14:/home/arnab/ros2_ws/install/ros2_control_demo_example_12:/home/arnab/ros2_ws/install/ros2_control_demo_example_11:/home/arnab/ros2_ws/install/ros2_control_demo_example_10:/home/arnab/ros2_ws/install/ros2_control_demo_example_1:/home/arnab/ros2_ws/install/ros2_control_demo_description:/home/arnab/ros2_ws/install/diffdrive_arduino:/home/arnab/ros2_ws/install/custom_motor_hw:/home/arnab/ros2_ws/install/articubot_one /usr/bin/cmake --install /home/arnab/ros2_ws/build/serial
+[3.011s] -- Install configuration: ""
+[3.011s] -- Execute custom install script
+[3.011s] -- Up-to-date symlink: /home/arnab/ros2_ws/install/serial/lib/libserial.a
+[3.011s] -- Up-to-date symlink: /home/arnab/ros2_ws/install/serial/include/serial/serial.h
+[3.011s] -- Up-to-date symlink: /home/arnab/ros2_ws/install/serial/include/serial/v8stdint.h
+[3.012s] -- Up-to-date symlink: /home/arnab/ros2_ws/install/serial/share/serial/environment/library_path.sh
+[3.012s] -- Up-to-date symlink: /home/arnab/ros2_ws/install/serial/share/serial/environment/library_path.dsv
+[3.012s] -- Up-to-date symlink: /home/arnab/ros2_ws/install/serial/share/ament_index/resource_index/package_run_dependencies/serial
+[3.012s] -- Up-to-date symlink: /home/arnab/ros2_ws/install/serial/share/ament_index/resource_index/parent_prefix_path/serial
+[3.012s] -- Up-to-date symlink: /home/arnab/ros2_ws/install/serial/share/serial/environment/ament_prefix_path.sh
+[3.012s] -- Up-to-date symlink: /home/arnab/ros2_ws/install/serial/share/serial/environment/ament_prefix_path.dsv
+[3.012s] -- Up-to-date symlink: /home/arnab/ros2_ws/install/serial/share/serial/environment/path.sh
+[3.012s] -- Up-to-date symlink: /home/arnab/ros2_ws/install/serial/share/serial/environment/path.dsv
+[3.012s] -- Up-to-date symlink: /home/arnab/ros2_ws/install/serial/share/serial/local_setup.bash
+[3.013s] -- Up-to-date symlink: /home/arnab/ros2_ws/install/serial/share/serial/local_setup.sh
+[3.013s] -- Up-to-date symlink: /home/arnab/ros2_ws/install/serial/share/serial/local_setup.zsh
+[3.013s] -- Up-to-date symlink: /home/arnab/ros2_ws/install/serial/share/serial/local_setup.dsv
+[3.013s] -- Symlinking: /home/arnab/ros2_ws/install/serial/share/serial/package.dsv
+[3.019s] -- Up-to-date symlink: /home/arnab/ros2_ws/install/serial/share/ament_index/resource_index/packages/serial
+[3.020s] -- Up-to-date symlink: /home/arnab/ros2_ws/install/serial/share/serial/cmake/ament_cmake_export_include_directories-extras.cmake
+[3.020s] -- Up-to-date symlink: /home/arnab/ros2_ws/install/serial/share/serial/cmake/ament_cmake_export_libraries-extras.cmake
+[3.020s] -- Up-to-date symlink: /home/arnab/ros2_ws/install/serial/share/serial/cmake/serialConfig.cmake
+[3.020s] -- Up-to-date symlink: /home/arnab/ros2_ws/install/serial/share/serial/cmake/serialConfig-version.cmake
+[3.020s] -- Up-to-date symlink: /home/arnab/ros2_ws/install/serial/share/serial/package.xml
+[3.022s] Invoked command in '/home/arnab/ros2_ws/build/serial' returned '0': CMAKE_PREFIX_PATH=/home/arnab/ros2_ws/install/test_bot:/home/arnab/ros2_ws/install/ros2_control_demo_testing:/home/arnab/ros2_ws/install/pc_serial_communication:/home/arnab/ros2_ws/install/motor_serial_bridge:/opt/ros/humble:/home/arnab/ros2_ws/install/serial:/home/arnab/ros2_ws/install/ros2_control_demos:/home/arnab/ros2_ws/install/ros2_control_demo_example_9:/home/arnab/ros2_ws/install/ros2_control_demo_example_8:/home/arnab/ros2_ws/install/ros2_control_demo_example_7:/home/arnab/ros2_ws/install/ros2_control_demo_example_6:/home/arnab/ros2_ws/install/ros2_control_demo_example_15:/home/arnab/ros2_ws/install/ros2_control_demo_example_13:/home/arnab/ros2_ws/install/ros2_control_demo_example_5:/home/arnab/ros2_ws/install/ros2_control_demo_example_4:/home/arnab/ros2_ws/install/ros2_control_demo_example_3:/home/arnab/ros2_ws/install/ros2_control_demo_example_2:/home/arnab/ros2_ws/install/ros2_control_demo_example_14:/home/arnab/ros2_ws/install/ros2_control_demo_example_12:/home/arnab/ros2_ws/install/ros2_control_demo_example_11:/home/arnab/ros2_ws/install/ros2_control_demo_example_10:/home/arnab/ros2_ws/install/ros2_control_demo_example_1:/home/arnab/ros2_ws/install/ros2_control_demo_description:/home/arnab/ros2_ws/install/diffdrive_arduino:/home/arnab/ros2_ws/install/custom_motor_hw:/home/arnab/ros2_ws/install/articubot_one /usr/bin/cmake --install /home/arnab/ros2_ws/build/serial
