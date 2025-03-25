@@ -32,58 +32,53 @@ void countPulse2() { pulseCount2++; }
 
 void setup() {
     Serial.begin(9600);
-    initializeMotors();
-    initializeHallSensors();
+    
+    // Initialize motor pins
+    pinMode(FWD_REV_1, OUTPUT); pinMode(EN_1, OUTPUT); pinMode(PWM_1, OUTPUT);
+    pinMode(FWD_REV_2, OUTPUT); pinMode(EN_2, OUTPUT); pinMode(PWM_2, OUTPUT);
+
+    // Initialize Hall sensors
+    pinMode(HALL_1, INPUT); pinMode(HALL_2, INPUT);
+    attachInterrupt(digitalPinToInterrupt(HALL_1), countPulse1, RISING);
+    attachInterrupt(digitalPinToInterrupt(HALL_2), countPulse2, RISING);
+
+    stopMotors(); // Ensure motors start in stopped state
 }
 
 void loop() {
     measureSpeed();  // Calculate RPM & speed
-    readSerialData();
+    readSerialData();  // Read movement commands from ROS
 }
 
-// Initialize Motors
-void initializeMotors() {
-    pinMode(FWD_REV_1, OUTPUT); pinMode(EN_1, OUTPUT); pinMode(PWM_1, OUTPUT);
-    pinMode(FWD_REV_2, OUTPUT); pinMode(EN_2, OUTPUT); pinMode(PWM_2, OUTPUT);
-    stopMotors();
-}
-
-// Initialize Hall Sensors
-void initializeHallSensors() {
-    pinMode(HALL_1, INPUT); pinMode(HALL_2, INPUT);
-    attachInterrupt(digitalPinToInterrupt(HALL_1), countPulse1, RISING);
-    attachInterrupt(digitalPinToInterrupt(HALL_2), countPulse2, RISING);
-}
-
-// Function to Calculate RPM & Speed
+// Function to measure RPM & Speed
 void measureSpeed() {
     if (millis() - prevMillis >= interval) {
-        float timeMin = interval / 60000.0; // Convert ms to minutes
-        
+        prevMillis = millis();
+
         rpmL = (pulseCount1 * 60.0) / PULSES_PER_REV;
         rpmR = (pulseCount2 * 60.0) / PULSES_PER_REV;
 
-        velocityL = (WHEEL_CIRCUMFERENCE * rpmL) / 60.0; // m/s
-        velocityR = (WHEEL_CIRCUMFERENCE * rpmR) / 60.0; // m/s
+        velocityL = (WHEEL_CIRCUMFERENCE * rpmL) / 60.0; 
+        velocityR = (WHEEL_CIRCUMFERENCE * rpmR) / 60.0; 
 
-        // Send RPM & speed to ROS 2
-        Serial.print("L_RPM:"); Serial.print(rpmL); Serial.print("|");
-        Serial.print("R_RPM:"); Serial.print(rpmR); Serial.print("|");
-        
-        Serial.print("L_Speed:"); Serial.print(velocityL); Serial.print(" m/s|");
-        Serial.print("R_Speed:"); Serial.println(velocityR); Serial.print(" m/s");
+        Serial.flush();  // **Ensure old data is cleared before writing new data**
+
+        // Send formatted odometry data to ROS
+        Serial.print("L_RPM:"); Serial.print(rpmL, 2);
+        Serial.print("|R_RPM:"); Serial.print(rpmR, 2);
+        Serial.print("|L_Speed:"); Serial.print(velocityL, 3);
+        Serial.print("|R_Speed:"); Serial.print(velocityR, 3);
+        Serial.println(";");  // End the message with a semicolon
 
         pulseCount1 = 0;
         pulseCount2 = 0;
-        prevMillis = millis();
     }
 }
 
-// Read Serial Commands from ROS 2
+// Function to read Serial Commands from ROS 2
 void readSerialData() {
     if (Serial.available()) {
-        String data = Serial.readStringUntil('\n');  
-        int command = data.toInt();
+        int command = Serial.parseInt();
         executeCommand(command);
     }
 }
@@ -95,15 +90,15 @@ void executeCommand(int command) {
     bool reverseL = false, reverseR = false;
 
     switch (command) {
-        case 1: speedL = -speed; speedR = -speed; break;
-        case -1: speedL = speed; speedR = speed; break;
-        case 2: speedL = -speed; speedR = speed; break;
-        case -2: speedL = speed; speedR = -speed; break;
-        case 3: speedL = -(speed / 2); speedR = -speed; break;
-        case -3: speedL = speed; speedR = speed / 2; break;
-        case 4: speedL = -speed; speedR = -(speed / 2); break;
-        case -4: speedL = speed / 2; speedR = speed; break;
-        case 0: stopMotors(); return;
+        case 1: speedL = -speed; speedR = -speed; break;  // Forward
+        case -1: speedL = speed; speedR = speed; break;  // Backward
+        case 2: speedL = -speed; speedR = speed; break;  // Turn Right
+        case -2: speedL = speed; speedR = -speed; break; // Turn Left
+        case 3: speedL = -(speed / 2); speedR = -speed; break; // Forward + Right
+        case -3: speedL = speed; speedR = speed / 2; break;  // Backward + Right
+        case 4: speedL = -speed; speedR = -(speed / 2); break; // Forward + Left
+        case -4: speedL = speed / 2; speedR = speed; break;  // Backward + Left
+        case 0: stopMotors(); return;  // Stop
         default: stopMotors(); return;
     }
 

@@ -12,7 +12,7 @@ motor_serial_bridge/__init__.py
 motor_serial_bridge/all_direction.py
 motor_serial_bridge/cmd_to_serial.py
 motor_serial_bridge/cmd_to_serial_and_odom.py
-motor_serial_bridge/encoder_to_odom.py
+motor_serial_bridge/encoder_odom.py
 motor_serial_bridge/motor_bridge_node.py
 resource/motor_serial_bridge
 test/test_copyright.py

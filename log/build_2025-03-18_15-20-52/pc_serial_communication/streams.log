@@ -1,0 +1,42 @@
+[0.970s] Invoking command in '/home/arnab/ros2_ws/build/pc_serial_communication': PYTHONPATH=/home/arnab/ros2_ws/build/pc_serial_communication/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/arnab/ros2_ws/install/pc_serial_communication/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/arnab/ros2_ws/build/pc_serial_communication/build
+[1.145s] running develop
+[1.266s] Removing /home/arnab/ros2_ws/install/pc_serial_communication/lib/python3.10/site-packages/pc-serial-communication.egg-link (link to .)
+[1.302s] Invoked command in '/home/arnab/ros2_ws/build/pc_serial_communication' returned '0': PYTHONPATH=/home/arnab/ros2_ws/build/pc_serial_communication/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/arnab/ros2_ws/install/pc_serial_communication/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/arnab/ros2_ws/build/pc_serial_communication/build
+[1.302s] Invoking command in '/home/arnab/ros2_ws/src/pc_serial_communication': PYTHONPATH=/home/arnab/ros2_ws/build/pc_serial_communication/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/arnab/ros2_ws/install/pc_serial_communication/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/pc_serial_communication build --build-base /home/arnab/ros2_ws/build/pc_serial_communication/build install --record /home/arnab/ros2_ws/build/pc_serial_communication/install.log --single-version-externally-managed install_data --force
+[1.490s] running egg_info
+[1.497s] writing ../../build/pc_serial_communication/pc_serial_communication.egg-info/PKG-INFO
+[1.497s] writing dependency_links to ../../build/pc_serial_communication/pc_serial_communication.egg-info/dependency_links.txt
+[1.497s] writing entry points to ../../build/pc_serial_communication/pc_serial_communication.egg-info/entry_points.txt
+[1.497s] writing requirements to ../../build/pc_serial_communication/pc_serial_communication.egg-info/requires.txt
+[1.497s] writing top-level names to ../../build/pc_serial_communication/pc_serial_communication.egg-info/top_level.txt
+[1.516s] reading manifest file '../../build/pc_serial_communication/pc_serial_communication.egg-info/SOURCES.txt'
+[1.517s] writing manifest file '../../build/pc_serial_communication/pc_serial_communication.egg-info/SOURCES.txt'
+[1.517s] running build
+[1.517s] running build_py
+[1.517s] running install
+[1.520s] running install_lib
+[1.527s] copying /home/arnab/ros2_ws/build/pc_serial_communication/build/lib/pc_serial_communication/arduino_to_ros.py -> /home/arnab/ros2_ws/install/pc_serial_communication/lib/python3.10/site-packages/pc_serial_communication
+[1.527s] copying /home/arnab/ros2_ws/build/pc_serial_communication/build/lib/pc_serial_communication/bno055_reader.py -> /home/arnab/ros2_ws/install/pc_serial_communication/lib/python3.10/site-packages/pc_serial_communication
+[1.527s] copying /home/arnab/ros2_ws/build/pc_serial_communication/build/lib/pc_serial_communication/serial_node.py -> /home/arnab/ros2_ws/install/pc_serial_communication/lib/python3.10/site-packages/pc_serial_communication
+[1.527s] copying /home/arnab/ros2_ws/build/pc_serial_communication/build/lib/pc_serial_communication/imu_publisher.py -> /home/arnab/ros2_ws/install/pc_serial_communication/lib/python3.10/site-packages/pc_serial_communication
+[1.527s] copying /home/arnab/ros2_ws/build/pc_serial_communication/build/lib/pc_serial_communication/__init__.py -> /home/arnab/ros2_ws/install/pc_serial_communication/lib/python3.10/site-packages/pc_serial_communication
+[1.527s] copying /home/arnab/ros2_ws/build/pc_serial_communication/build/lib/pc_serial_communication/cmd_vel_value.py -> /home/arnab/ros2_ws/install/pc_serial_communication/lib/python3.10/site-packages/pc_serial_communication
+[1.528s] byte-compiling /home/arnab/ros2_ws/install/pc_serial_communication/lib/python3.10/site-packages/pc_serial_communication/arduino_to_ros.py to arduino_to_ros.cpython-310.pyc
+[1.528s] byte-compiling /home/arnab/ros2_ws/install/pc_serial_communication/lib/python3.10/site-packages/pc_serial_communication/bno055_reader.py to bno055_reader.cpython-310.pyc
+[1.528s] byte-compiling /home/arnab/ros2_ws/install/pc_serial_communication/lib/python3.10/site-packages/pc_serial_communication/serial_node.py to serial_node.cpython-310.pyc
+[1.529s] byte-compiling /home/arnab/ros2_ws/install/pc_serial_communication/lib/python3.10/site-packages/pc_serial_communication/imu_publisher.py to imu_publisher.cpython-310.pyc
+[1.529s] byte-compiling /home/arnab/ros2_ws/install/pc_serial_communication/lib/python3.10/site-packages/pc_serial_communication/__init__.py to __init__.cpython-310.pyc
+[1.529s] byte-compiling /home/arnab/ros2_ws/install/pc_serial_communication/lib/python3.10/site-packages/pc_serial_communication/cmd_vel_value.py to cmd_vel_value.cpython-310.pyc
+[1.529s] running install_data
+[1.529s] copying resource/pc_serial_communication -> /home/arnab/ros2_ws/install/pc_serial_communication/share/ament_index/resource_index/packages
+[1.529s] copying package.xml -> /home/arnab/ros2_ws/install/pc_serial_communication/share/pc_serial_communication
+[1.530s] running install_egg_info
+[1.537s] Copying ../../build/pc_serial_communication/pc_serial_communication.egg-info to /home/arnab/ros2_ws/install/pc_serial_communication/lib/python3.10/site-packages/pc_serial_communication-0.0.0-py3.10.egg-info
+[1.537s] running install_scripts
+[1.567s] Installing arduino_to_ros script to /home/arnab/ros2_ws/install/pc_serial_communication/lib/pc_serial_communication
+[1.567s] Installing bno055_reader script to /home/arnab/ros2_ws/install/pc_serial_communication/lib/pc_serial_communication
+[1.567s] Installing cmd_vel_value script to /home/arnab/ros2_ws/install/pc_serial_communication/lib/pc_serial_communication
+[1.567s] Installing imu_publisher script to /home/arnab/ros2_ws/install/pc_serial_communication/lib/pc_serial_communication
+[1.567s] Installing serial_node script to /home/arnab/ros2_ws/install/pc_serial_communication/lib/pc_serial_communication
+[1.567s] writing list of installed files to '/home/arnab/ros2_ws/build/pc_serial_communication/install.log'
+[1.604s] Invoked command in '/home/arnab/ros2_ws/src/pc_serial_communication' returned '0': PYTHONPATH=/home/arnab/ros2_ws/build/pc_serial_communication/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/arnab/ros2_ws/install/pc_serial_communication/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/pc_serial_communication build --build-base /home/arnab/ros2_ws/build/pc_serial_communication/build install --record /home/arnab/ros2_ws/build/pc_serial_communication/install.log --single-version-externally-managed install_data --force

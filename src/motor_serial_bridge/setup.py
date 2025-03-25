@@ -24,7 +24,7 @@ setup(
             'cmd_to_serial = motor_serial_bridge.cmd_to_serial:main',
             'cmd_to_serial_and_odom = motor_serial_bridge.cmd_to_serial_and_odom:main',
             'all_direction = motor_serial_bridge.all_direction:main',
-            'encoder_to_odom = motor_serial_bridge.encoder_to_odom:main',
+            'encoder_odom = motor_serial_bridge.encoder_odom:main',
         ],
     },
 )
