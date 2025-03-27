@@ -1,0 +1,26 @@
+encoder_publisher:
+  ros__parameters:
+    serial_device: "/dev/ttyACM1"
+    baud_rate: 57600
+    timeout_ms: 1000
+
+odom_publisher_node:
+  ros__parameters:
+    wheel_radius: 0.065
+    wheel_separation: 0.36
+    wheel_radius_multiplier: 1.0
+    wheel_separation_multiplier: 1.0
+    ticks_per_revolution: 160
+    odom_topic: "odom"
+    frame_id: "odom"
+    child_frame_id: "base_footprint"
+    publish_tf: true
+    print_odom: false
+
+motor_controller_openloop:
+  ros__parameters:
+    serial_device: "/dev/ttyACM0"
+    baud_rate: 57600
+    timeout_ms: 1000
+    wheel_radius: 0.065
+    wheel_separation: 0.36

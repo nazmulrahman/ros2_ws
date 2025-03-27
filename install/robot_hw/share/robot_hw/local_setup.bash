@@ -1,0 +1,1 @@
+/home/arnab/ros2_ws/build/robot_hw/ament_cmake_environment_hooks/local_setup.bash
