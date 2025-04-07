@@ -4,6 +4,8 @@
 /home/arnab/ros2_ws/install/robot_hw/lib/robot_hw/encoder_publisher
 /home/arnab/ros2_ws/install/robot_hw/lib/robot_hw/motor_controller_openloop
 /home/arnab/ros2_ws/install/robot_hw/lib/robot_hw/odom_publisher_node
+/home/arnab/ros2_ws/install/robot_hw/lib/robot_hw/motor_controller_pid
+/home/arnab/ros2_ws/install/robot_hw/lib/robot_hw/rpm_test
 /home/arnab/ros2_ws/install/robot_hw/share/ament_index/resource_index/package_run_dependencies/robot_hw
 /home/arnab/ros2_ws/install/robot_hw/share/ament_index/resource_index/parent_prefix_path/robot_hw
 /home/arnab/ros2_ws/install/robot_hw/share/robot_hw/environment/ament_prefix_path.sh

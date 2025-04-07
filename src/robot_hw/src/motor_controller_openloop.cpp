@@ -82,7 +82,12 @@ private:
 
     int rpm_to_pwm(float rpm)
     {
-        int pwm = 0.0164*rpm*rpm + 2.2207 * rpm + 9.6945;
+        float abs_rpm = abs(rpm);  //Accounting for negative rpm
+
+        int pwm = 0.0164*abs_rpm*abs_rpm + 2.2207 * abs_rpm + 9.6945;
+        if(rpm < 0)
+            pwm*=-1;  //If negative speed is required
+
         if (pwm > 255)
             pwm = 255;
         if (pwm < -255)

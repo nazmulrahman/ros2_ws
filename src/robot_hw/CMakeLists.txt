@@ -38,6 +38,8 @@ include_directories(
 add_executable(encoder_publisher src/encoder_publisher.cpp)
 add_executable(motor_controller_openloop src/motor_controller_openloop.cpp)
 add_executable(odom_publisher_node src/odom_publisher_node.cpp)
+add_executable(motor_controller_pid src/motor_controller_pid.cpp)
+add_executable(rpm_test src/rpm_test.cpp)
 
 
 
@@ -45,10 +47,13 @@ add_executable(odom_publisher_node src/odom_publisher_node.cpp)
 ament_target_dependencies(encoder_publisher rclcpp geometry_msgs)  # Add other dependencies if needed
 ament_target_dependencies(motor_controller_openloop rclcpp geometry_msgs)  # Add other dependencies if needed
 ament_target_dependencies(odom_publisher_node rclcpp geometry_msgs nav_msgs tf2_ros tf2)
+ament_target_dependencies(motor_controller_pid rclcpp geometry_msgs)
+ament_target_dependencies(rpm_test rclcpp geometry_msgs)
 
 # Link LibSerial
 target_link_libraries(encoder_publisher ${LibSerial_LIBRARIES})
 target_link_libraries(motor_controller_openloop ${LibSerial_LIBRARIES})
+target_link_libraries(motor_controller_pid ${LibSerial_LIBRARIES})
 
 
 # Install the executable
@@ -56,6 +61,8 @@ install(TARGETS
 encoder_publisher
 motor_controller_openloop
 odom_publisher_node
+motor_controller_pid
+rpm_test
   DESTINATION lib/${PROJECT_NAME}
 )
 

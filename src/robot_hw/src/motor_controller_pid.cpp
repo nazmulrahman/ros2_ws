@@ -19,6 +19,7 @@ public:
         this->declare_parameter<double>("Kp", 1.0);
         this->declare_parameter<double>("Ki", 0.1);
         this->declare_parameter<double>("Kd", 0.05);
+        this->declare_parameter<int>("ticks_per_revolution", 160);
         
         // Get parameters
         serial_device_ = this->get_parameter("serial_device").as_string();
@@ -29,6 +30,7 @@ public:
         Kp_ = this->get_parameter("Kp").as_double();
         Ki_ = this->get_parameter("Ki").as_double();
         Kd_ = this->get_parameter("Kd").as_double();
+        ticks_per_revolution_ = this->get_parameter("ticks_per_revolution").as_int();
         
         ms_to_rpm_ = (1/(wheel_radius_ * 2 * 3.1415)) * 60;
         
@@ -70,9 +72,12 @@ private:
         
         if (dt == 0) return;
 
+        double d_left_ticks = msg->x - prev_left_ticks;
+        double d_right_ticks = msg->y - prev_right_ticks;
+
         // Convert ticks to RPM
-        double actual_left_rpm = (msg->x / dt) * 60.0 / encoder_ticks_per_rev_;
-        double actual_right_rpm = (msg->y / dt) * 60.0 / encoder_ticks_per_rev_;
+        double actual_left_rpm = (d_left_ticks / dt) * 60.0 / encoder_ticks_per_rev_;
+        double actual_right_rpm = (d_right_ticks / dt) * 60.0 / encoder_ticks_per_rev_;
 
         // Compute PID control
         int left_pwm = compute_pid(target_left_rpm_, actual_left_rpm, left_error_, left_integral_, left_prev_error_, dt);
@@ -97,7 +102,7 @@ private:
     }
 
     std::string serial_device_;
-    int baud_rate_, timeout_ms_;
+    int baud_rate_, timeout_ms_ , ticks_per_revolution_;
     double wheel_radius_, wheel_separation_;
     double Kp_, Ki_, Kd_;
     double ms_to_rpm_;
@@ -107,6 +112,8 @@ private:
     double left_error_ = 0.0, right_error_ = 0.0;
     double left_integral_ = 0.0, right_integral_ = 0.0;
     double left_prev_error_ = 0.0, right_prev_error_ = 0.0;
+
+    double prev_left_ticks = 0.0, prev_right_ticks = 0.0;
     
     rclcpp::Time prev_time_;
     robot_hw::ArduinoComms arduino_;

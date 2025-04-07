@@ -236,6 +236,32 @@ odom_publisher_node/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/odom_publisher_node.dir/build.make CMakeFiles/odom_publisher_node.dir/build
 .PHONY : odom_publisher_node/fast
 
+#=============================================================================
+# Target rules for targets named motor_controller_pid
+
+# Build rule for target.
+motor_controller_pid: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 motor_controller_pid
+.PHONY : motor_controller_pid
+
+# fast build rule for target.
+motor_controller_pid/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_controller_pid.dir/build.make CMakeFiles/motor_controller_pid.dir/build
+.PHONY : motor_controller_pid/fast
+
+#=============================================================================
+# Target rules for targets named rpm_test
+
+# Build rule for target.
+rpm_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rpm_test
+.PHONY : rpm_test
+
+# fast build rule for target.
+rpm_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rpm_test.dir/build.make CMakeFiles/rpm_test.dir/build
+.PHONY : rpm_test/fast
+
 src/encoder_publisher.o: src/encoder_publisher.cpp.o
 .PHONY : src/encoder_publisher.o
 
@@ -284,6 +310,30 @@ src/motor_controller_openloop.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_controller_openloop.dir/build.make CMakeFiles/motor_controller_openloop.dir/src/motor_controller_openloop.cpp.s
 .PHONY : src/motor_controller_openloop.cpp.s
 
+src/motor_controller_pid.o: src/motor_controller_pid.cpp.o
+.PHONY : src/motor_controller_pid.o
+
+# target to build an object file
+src/motor_controller_pid.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_controller_pid.dir/build.make CMakeFiles/motor_controller_pid.dir/src/motor_controller_pid.cpp.o
+.PHONY : src/motor_controller_pid.cpp.o
+
+src/motor_controller_pid.i: src/motor_controller_pid.cpp.i
+.PHONY : src/motor_controller_pid.i
+
+# target to preprocess a source file
+src/motor_controller_pid.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_controller_pid.dir/build.make CMakeFiles/motor_controller_pid.dir/src/motor_controller_pid.cpp.i
+.PHONY : src/motor_controller_pid.cpp.i
+
+src/motor_controller_pid.s: src/motor_controller_pid.cpp.s
+.PHONY : src/motor_controller_pid.s
+
+# target to generate assembly for a file
+src/motor_controller_pid.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_controller_pid.dir/build.make CMakeFiles/motor_controller_pid.dir/src/motor_controller_pid.cpp.s
+.PHONY : src/motor_controller_pid.cpp.s
+
 src/odom_publisher_node.o: src/odom_publisher_node.cpp.o
 .PHONY : src/odom_publisher_node.o
 
@@ -308,6 +358,30 @@ src/odom_publisher_node.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/odom_publisher_node.dir/build.make CMakeFiles/odom_publisher_node.dir/src/odom_publisher_node.cpp.s
 .PHONY : src/odom_publisher_node.cpp.s
 
+src/rpm_test.o: src/rpm_test.cpp.o
+.PHONY : src/rpm_test.o
+
+# target to build an object file
+src/rpm_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rpm_test.dir/build.make CMakeFiles/rpm_test.dir/src/rpm_test.cpp.o
+.PHONY : src/rpm_test.cpp.o
+
+src/rpm_test.i: src/rpm_test.cpp.i
+.PHONY : src/rpm_test.i
+
+# target to preprocess a source file
+src/rpm_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rpm_test.dir/build.make CMakeFiles/rpm_test.dir/src/rpm_test.cpp.i
+.PHONY : src/rpm_test.cpp.i
+
+src/rpm_test.s: src/rpm_test.cpp.s
+.PHONY : src/rpm_test.s
+
+# target to generate assembly for a file
+src/rpm_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rpm_test.dir/build.make CMakeFiles/rpm_test.dir/src/rpm_test.cpp.s
+.PHONY : src/rpm_test.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -325,16 +399,24 @@ help:
 	@echo "... uninstall"
 	@echo "... encoder_publisher"
 	@echo "... motor_controller_openloop"
+	@echo "... motor_controller_pid"
 	@echo "... odom_publisher_node"
+	@echo "... rpm_test"
 	@echo "... src/encoder_publisher.o"
 	@echo "... src/encoder_publisher.i"
 	@echo "... src/encoder_publisher.s"
 	@echo "... src/motor_controller_openloop.o"
 	@echo "... src/motor_controller_openloop.i"
 	@echo "... src/motor_controller_openloop.s"
+	@echo "... src/motor_controller_pid.o"
+	@echo "... src/motor_controller_pid.i"
+	@echo "... src/motor_controller_pid.s"
 	@echo "... src/odom_publisher_node.o"
 	@echo "... src/odom_publisher_node.i"
 	@echo "... src/odom_publisher_node.s"
+	@echo "... src/rpm_test.o"
+	@echo "... src/rpm_test.i"
+	@echo "... src/rpm_test.s"
 .PHONY : help
 
 

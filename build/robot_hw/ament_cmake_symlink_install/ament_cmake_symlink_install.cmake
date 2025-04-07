@@ -313,7 +313,7 @@ message(STATUS "Execute custom install script")
 # install(DIRECTORY "launch" "config" "DESTINATION" "share/robot_hw/")
 ament_cmake_symlink_install_directory("/home/arnab/ros2_ws/src/robot_hw" DIRECTORY "launch" "config" "DESTINATION" "share/robot_hw/")
 
-# install("TARGETS" "encoder_publisher" "motor_controller_openloop" "odom_publisher_node" "DESTINATION" "lib/robot_hw")
+# install("TARGETS" "encoder_publisher" "motor_controller_openloop" "odom_publisher_node" "motor_controller_pid" "rpm_test" "DESTINATION" "lib/robot_hw")
 include("/home/arnab/ros2_ws/build/robot_hw/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install(FILES "/home/arnab/ros2_ws/build/robot_hw/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/robot_hw" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
