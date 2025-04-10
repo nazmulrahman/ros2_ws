@@ -262,6 +262,19 @@ rpm_test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rpm_test.dir/build.make CMakeFiles/rpm_test.dir/build
 .PHONY : rpm_test/fast
 
+#=============================================================================
+# Target rules for targets named imu_publisher
+
+# Build rule for target.
+imu_publisher: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imu_publisher
+.PHONY : imu_publisher
+
+# fast build rule for target.
+imu_publisher/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imu_publisher.dir/build.make CMakeFiles/imu_publisher.dir/build
+.PHONY : imu_publisher/fast
+
 src/encoder_publisher.o: src/encoder_publisher.cpp.o
 .PHONY : src/encoder_publisher.o
 
@@ -285,6 +298,30 @@ src/encoder_publisher.s: src/encoder_publisher.cpp.s
 src/encoder_publisher.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encoder_publisher.dir/build.make CMakeFiles/encoder_publisher.dir/src/encoder_publisher.cpp.s
 .PHONY : src/encoder_publisher.cpp.s
+
+src/imu_publisher.o: src/imu_publisher.cpp.o
+.PHONY : src/imu_publisher.o
+
+# target to build an object file
+src/imu_publisher.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imu_publisher.dir/build.make CMakeFiles/imu_publisher.dir/src/imu_publisher.cpp.o
+.PHONY : src/imu_publisher.cpp.o
+
+src/imu_publisher.i: src/imu_publisher.cpp.i
+.PHONY : src/imu_publisher.i
+
+# target to preprocess a source file
+src/imu_publisher.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imu_publisher.dir/build.make CMakeFiles/imu_publisher.dir/src/imu_publisher.cpp.i
+.PHONY : src/imu_publisher.cpp.i
+
+src/imu_publisher.s: src/imu_publisher.cpp.s
+.PHONY : src/imu_publisher.s
+
+# target to generate assembly for a file
+src/imu_publisher.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imu_publisher.dir/build.make CMakeFiles/imu_publisher.dir/src/imu_publisher.cpp.s
+.PHONY : src/imu_publisher.cpp.s
 
 src/motor_controller_openloop.o: src/motor_controller_openloop.cpp.o
 .PHONY : src/motor_controller_openloop.o
@@ -398,6 +435,7 @@ help:
 	@echo "... robot_hw_uninstall"
 	@echo "... uninstall"
 	@echo "... encoder_publisher"
+	@echo "... imu_publisher"
 	@echo "... motor_controller_openloop"
 	@echo "... motor_controller_pid"
 	@echo "... odom_publisher_node"
@@ -405,6 +443,9 @@ help:
 	@echo "... src/encoder_publisher.o"
 	@echo "... src/encoder_publisher.i"
 	@echo "... src/encoder_publisher.s"
+	@echo "... src/imu_publisher.o"
+	@echo "... src/imu_publisher.i"
+	@echo "... src/imu_publisher.s"
 	@echo "... src/motor_controller_openloop.o"
 	@echo "... src/motor_controller_openloop.i"
 	@echo "... src/motor_controller_openloop.s"

@@ -85,6 +85,44 @@ public:
     val_2 = std::atoi(response.substr(del_pos + 1).c_str());
   }
 
+  
+  void read_imu_values(float &v1, float &v2, float &v3, float &v4, float &v5,
+                      float &v6, float &v7, float &v8, float &v9, float &v10)
+  {
+      std::string response = send_msg("e\r");
+  
+      std::istringstream ss(response);
+      std::string token;
+      float values[10];
+      int i = 0;
+  
+      while (std::getline(ss, token, ',') && i < 10) {
+          try {
+              values[i++] = std::stof(token);
+          } catch (const std::exception &e) {
+              std::cerr << "Conversion error: " << e.what() << " for token '" << token << "'\n";
+              return;
+          }
+      }
+  
+      if (i != 10) {
+          std::cerr << "Error: Expected 10 values but got " << i << std::endl;
+          return;
+      }
+  
+      v1 = values[0];
+      v2 = values[1];
+      v3 = values[2];
+      v4 = values[3];
+      v5 = values[4];
+      v6 = values[5];
+      v7 = values[6];
+      v8 = values[7];
+      v9 = values[8];
+      v10 = values[9];
+  }
+  
+
   void set_motor_values(int val_1, int val_2)
   {
     std::stringstream ss;

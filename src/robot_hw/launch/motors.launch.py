@@ -26,7 +26,7 @@ def generate_launch_description():
 
     start_motor_control = Node(
         package='robot_hw',
-        executable='motor_controller_openloop',
+        executable='motor_controller_pid',
         parameters=[hw_params_file],
     )
 

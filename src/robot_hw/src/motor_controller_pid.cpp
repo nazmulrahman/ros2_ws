@@ -1,130 +1,85 @@
 #include "rclcpp/rclcpp.hpp"
-#include "geometry_msgs/msg/vector3.hpp"
+#include "std_msgs/msg/float64.hpp"
 #include "geometry_msgs/msg/twist.hpp"
-#include "robot_hw/arduino_comms.hpp"
-
-using std::placeholders::_1;
 
 class MotorControllerPID : public rclcpp::Node {
 public:
-    MotorControllerPID()
-        : Node("motor_controller_pid"), prev_time_(this->now()) {
-        
-        // Parameters
-        this->declare_parameter<std::string>("serial_device", "/dev/ttyACM0");
-        this->declare_parameter<int>("baud_rate", 57600);
-        this->declare_parameter<int>("timeout_ms", 1000);
-        this->declare_parameter<double>("wheel_separation", 0.36);
-        this->declare_parameter<double>("wheel_radius", 0.065);
-        this->declare_parameter<double>("Kp", 1.0);
-        this->declare_parameter<double>("Ki", 0.1);
-        this->declare_parameter<double>("Kd", 0.05);
-        this->declare_parameter<int>("ticks_per_revolution", 160);
-        
-        // Get parameters
-        serial_device_ = this->get_parameter("serial_device").as_string();
-        baud_rate_ = this->get_parameter("baud_rate").as_int();
-        timeout_ms_ = this->get_parameter("timeout_ms").as_int();
-        wheel_separation_ = this->get_parameter("wheel_separation").as_double();
-        wheel_radius_ = this->get_parameter("wheel_radius").as_double();
+    MotorControllerPID() : Node("motor_controller_pid") {
+        // Declare and get initial PID parameters
+        this->declare_parameter("Kp", 1.0);
+        this->declare_parameter("Ki", 0.0);
+        this->declare_parameter("Kd", 0.0);
+
         Kp_ = this->get_parameter("Kp").as_double();
         Ki_ = this->get_parameter("Ki").as_double();
         Kd_ = this->get_parameter("Kd").as_double();
-        ticks_per_revolution_ = this->get_parameter("ticks_per_revolution").as_int();
-        
-        ms_to_rpm_ = (1/(wheel_radius_ * 2 * 3.1415)) * 60;
-        
-        // Initialize Arduino communication
-        RCLCPP_INFO(this->get_logger(), "Connecting to Arduino...");
-        arduino_.connect(serial_device_, baud_rate_, timeout_ms_);
-        
-        if (!arduino_.connected()) {
-            RCLCPP_ERROR(this->get_logger(), "Failed to connect to Arduino!");
-            rclcpp::shutdown();
-            return;
-        }
-        RCLCPP_INFO(this->get_logger(), "Connected successfully!");
 
-        arduino_.send_empty_msg();
+        // Setup dynamic parameter callback
+        this->add_on_set_parameters_callback(
+            [this](const std::vector<rclcpp::Parameter> &params) {
+                for (const auto &param : params) {
+                    if (param.get_name() == "Kp") Kp_ = param.as_double();
+                    if (param.get_name() == "Ki") Ki_ = param.as_double();
+                    if (param.get_name() == "Kd") Kd_ = param.as_double();
+                }
+                RCLCPP_INFO(this->get_logger(), "Updated PID: Kp=%.2f, Ki=%.2f, Kd=%.2f", Kp_, Ki_, Kd_);
+                rcl_interfaces::msg::SetParametersResult result;
+                result.successful = true;
+                return result;
+            }
+        );
 
+        // Subscribe to velocity commands
         cmd_vel_sub_ = this->create_subscription<geometry_msgs::msg::Twist>(
-            "cmd_vel", 10, std::bind(&MotorControllerPID::cmd_vel_callback, this, _1));
-        ticks_sub_ = this->create_subscription<geometry_msgs::msg::Vector3>(
-            "ticks", 10, std::bind(&MotorControllerPID::ticks_callback, this, _1));
-    }
+            "cmd_vel", 10,
+            std::bind(&MotorControllerPID::cmdVelCallback, this, std::placeholders::_1)
+        );
 
-    ~MotorControllerPID() {
-        RCLCPP_INFO(this->get_logger(), "Disconnecting from Arduino...");
-        arduino_.disconnect();
-        RCLCPP_INFO(this->get_logger(), "Disconnected successfully.");
+        // Setup publishers for debugging RPM
+        target_rpm_pub_ = this->create_publisher<std_msgs::msg::Float64>("target_right_rpm", 10);
+        actual_rpm_pub_ = this->create_publisher<std_msgs::msg::Float64>("actual_right_rpm", 10);
+
+        RCLCPP_INFO(this->get_logger(), "MotorControllerPID node started");
     }
 
 private:
-    void cmd_vel_callback(const geometry_msgs::msg::Twist::SharedPtr msg) {
-        target_left_rpm_ = (msg->linear.x - (msg->angular.z * wheel_separation_ / 2)) * ms_to_rpm_;
-        target_right_rpm_ = (msg->linear.x + (msg->angular.z * wheel_separation_ / 2)) * ms_to_rpm_;
+    void cmdVelCallback(const geometry_msgs::msg::Twist::SharedPtr msg) {
+        // Fake simulation of actual RPM for demonstration
+        double target_right_rpm = msg->linear.x * 60.0;  // Fake logic
+        double actual_right_rpm = target_right_rpm - 5.0;  // Simulate slight error
+
+        // Apply PID (dummy just for structure)
+        double error = target_right_rpm - actual_right_rpm;
+        integral_ += error;
+        double derivative = error - prev_error_;
+        double output = Kp_ * error + Ki_ * integral_ + Kd_ * derivative;
+        prev_error_ = error;
+
+        // Log and publish
+        RCLCPP_INFO(this->get_logger(), "Target RPM: %.2f, Actual RPM: %.2f, Output: %.2f", target_right_rpm, actual_right_rpm, output);
+
+        std_msgs::msg::Float64 msg_target;
+        msg_target.data = target_right_rpm;
+        target_rpm_pub_->publish(msg_target);
+
+        std_msgs::msg::Float64 msg_actual;
+        msg_actual.data = actual_right_rpm;
+        actual_rpm_pub_->publish(msg_actual);
     }
 
-    void ticks_callback(const geometry_msgs::msg::Vector3::SharedPtr msg) {
-        rclcpp::Time now = this->now();
-        double dt = (now - prev_time_).seconds();
-        prev_time_ = now;
-        
-        if (dt == 0) return;
-
-        double d_left_ticks = msg->x - prev_left_ticks;
-        double d_right_ticks = msg->y - prev_right_ticks;
-
-        // Convert ticks to RPM
-        double actual_left_rpm = (d_left_ticks / dt) * 60.0 / encoder_ticks_per_rev_;
-        double actual_right_rpm = (d_right_ticks / dt) * 60.0 / encoder_ticks_per_rev_;
-
-        // Compute PID control
-        int left_pwm = compute_pid(target_left_rpm_, actual_left_rpm, left_error_, left_integral_, left_prev_error_, dt);
-        int right_pwm = compute_pid(target_right_rpm_, actual_right_rpm, right_error_, right_integral_, right_prev_error_, dt);
-        
-        // Send commands
-        if (!arduino_.connected()) {
-            RCLCPP_ERROR(this->get_logger(), "Lost connection to Arduino!");
-            return;
-        }
-        arduino_.set_motor_values_ol(left_pwm, right_pwm);
-    }
-
-    int compute_pid(double target_rpm, double actual_rpm, double &error, double &integral, double &prev_error, double dt) {
-        error = target_rpm - actual_rpm;
-        integral += error * dt;
-        double derivative = (error - prev_error) / dt;
-        prev_error = error;
-        
-        int pwm = static_cast<int>(Kp_ * error + Ki_ * integral + Kd_ * derivative);
-        return std::clamp(pwm, -255, 255);
-    }
-
-    std::string serial_device_;
-    int baud_rate_, timeout_ms_ , ticks_per_revolution_;
-    double wheel_radius_, wheel_separation_;
-    double Kp_, Ki_, Kd_;
-    double ms_to_rpm_;
-    double encoder_ticks_per_rev_ = 160.0; // Adjust according to encoder resolution
-    
-    double target_left_rpm_ = 0.0, target_right_rpm_ = 0.0;
-    double left_error_ = 0.0, right_error_ = 0.0;
-    double left_integral_ = 0.0, right_integral_ = 0.0;
-    double left_prev_error_ = 0.0, right_prev_error_ = 0.0;
-
-    double prev_left_ticks = 0.0, prev_right_ticks = 0.0;
-    
-    rclcpp::Time prev_time_;
-    robot_hw::ArduinoComms arduino_;
     rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr cmd_vel_sub_;
-    rclcpp::Subscription<geometry_msgs::msg::Vector3>::SharedPtr ticks_sub_;
+    rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr target_rpm_pub_;
+    rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr actual_rpm_pub_;
+
+    // PID Variables
+    double Kp_, Ki_, Kd_;
+    double integral_ = 0.0;
+    double prev_error_ = 0.0;
 };
 
-int main(int argc, char **argv) {
+int main(int argc, char *argv[]) {
     rclcpp::init(argc, argv);
-    auto node = std::make_shared<MotorControllerPID>();
-    rclcpp::spin(node);
+    rclcpp::spin(std::make_shared<MotorControllerPID>());
     rclcpp::shutdown();
     return 0;
 }

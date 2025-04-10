@@ -974,4 +974,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/odom_publisher_node.dir/DependInfo.cmake"
   "CMakeFiles/motor_controller_pid.dir/DependInfo.cmake"
   "CMakeFiles/rpm_test.dir/DependInfo.cmake"
+  "CMakeFiles/imu_publisher.dir/DependInfo.cmake"
   )

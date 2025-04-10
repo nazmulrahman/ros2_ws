@@ -4,6 +4,7 @@ encoder_publisher:
     baud_rate: 57600
     timeout_ms: 1000
 
+
 odom_publisher_node:
   ros__parameters:
     wheel_radius: 0.065
@@ -17,6 +18,20 @@ odom_publisher_node:
     publish_tf: true
     print_odom: false
 
+
+motor_controller_pid:
+  ros__parameters:
+    serial_device: "/dev/ttyACM0"
+    baud_rate: 57600
+    timeout_ms: 1000
+    wheel_radius: 0.065
+    wheel_separation: 0.36
+    Kp: 1.0
+    Ki: 0.0
+    Kd: 0.0
+    ticks_per_revolution: 160
+
+
 motor_controller_openloop:
   ros__parameters:
     serial_device: "/dev/ttyACM0"
@@ -24,3 +39,4 @@ motor_controller_openloop:
     timeout_ms: 1000
     wheel_radius: 0.065
     wheel_separation: 0.36
+

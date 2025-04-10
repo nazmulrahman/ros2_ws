@@ -1,23 +1,24 @@
 {
-  "configurations": [
-    {
-      "browse": {
-        "databaseFilename": "${default}",
-        "limitSymbolsToIncludedHeaders": false
-      },
-      "includePath": [
-        "/home/arnab/ros2_ws/install/serial/include/**",
-        "/opt/ros/humble/include/**",
-        "/home/arnab/ros2_ws/diffdrive_arduino/include/**",
-        "/home/arnab/ros2_ws/serial/include/**",
-        "/usr/include/**"
-      ],
-      "name": "ROS",
-      "intelliSenseMode": "gcc-x64",
-      "compilerPath": "/usr/bin/gcc",
-      "cStandard": "gnu11",
-      "cppStandard": "c++14"
-    }
-  ],
-  "version": 4
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "${default}",
+                "limitSymbolsToIncludedHeaders": false
+            },
+            "includePath": [
+                "/home/arnab/ros2_ws/install/serial/include/**",
+                "/opt/ros/humble/include/**",
+                "/home/arnab/ros2_ws/diffdrive_arduino/include/**",
+                "/home/arnab/ros2_ws/serial/include/**",
+                "/usr/include/**",
+                "${workspaceFolder}/src/robot_hw/include"
+            ],
+            "name": "ROS",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu11",
+            "cppStandard": "c++14"
+        }
+    ],
+    "version": 4
 }

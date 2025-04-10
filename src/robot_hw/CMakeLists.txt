@@ -9,6 +9,7 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
 find_package(nav_msgs REQUIRED)
 find_package(tf2_ros REQUIRED)
 find_package(tf2 REQUIRED)
@@ -40,6 +41,7 @@ add_executable(motor_controller_openloop src/motor_controller_openloop.cpp)
 add_executable(odom_publisher_node src/odom_publisher_node.cpp)
 add_executable(motor_controller_pid src/motor_controller_pid.cpp)
 add_executable(rpm_test src/rpm_test.cpp)
+add_executable(imu_publisher src/imu_publisher.cpp)
 
 
 
@@ -49,11 +51,14 @@ ament_target_dependencies(motor_controller_openloop rclcpp geometry_msgs)  # Add
 ament_target_dependencies(odom_publisher_node rclcpp geometry_msgs nav_msgs tf2_ros tf2)
 ament_target_dependencies(motor_controller_pid rclcpp geometry_msgs)
 ament_target_dependencies(rpm_test rclcpp geometry_msgs)
+ament_target_dependencies(imu_publisher rclcpp geometry_msgs sensor_msgs tf2_ros tf2)
+
 
 # Link LibSerial
 target_link_libraries(encoder_publisher ${LibSerial_LIBRARIES})
 target_link_libraries(motor_controller_openloop ${LibSerial_LIBRARIES})
 target_link_libraries(motor_controller_pid ${LibSerial_LIBRARIES})
+target_link_libraries(imu_publisher ${LibSerial_LIBRARIES})
 
 
 # Install the executable
@@ -63,8 +68,8 @@ motor_controller_openloop
 odom_publisher_node
 motor_controller_pid
 rpm_test
+imu_publisher
   DESTINATION lib/${PROJECT_NAME}
 )
 
 ament_package()
-

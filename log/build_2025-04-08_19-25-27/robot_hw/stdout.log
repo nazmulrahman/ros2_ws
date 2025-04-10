@@ -1,0 +1,36 @@
+[35m[1mConsolidate compiler generated dependencies of target motor_controller_openloop[0m
+[35m[1mConsolidate compiler generated dependencies of target motor_controller_pid[0m
+[ 60%] Built target encoder_publisher
+[ 60%] Built target odom_publisher_node
+[ 60%] Built target rpm_test
+[ 70%] [32mBuilding CXX object CMakeFiles/motor_controller_pid.dir/src/motor_controller_pid.cpp.o[0m
+[ 90%] Built target motor_controller_openloop
+[100%] [32m[1mLinking CXX executable motor_controller_pid[0m
+[100%] Built target motor_controller_pid
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/arnab/ros2_ws/install/robot_hw/share/robot_hw//launch/imu.launch.py
+-- Up-to-date symlink: /home/arnab/ros2_ws/install/robot_hw/share/robot_hw//launch/motors.launch.py
+-- Up-to-date symlink: /home/arnab/ros2_ws/install/robot_hw/share/robot_hw//launch/robot_hw.launch.py
+-- Up-to-date symlink: /home/arnab/ros2_ws/install/robot_hw/share/robot_hw//launch/robot_sensors.launch.py
+-- Up-to-date symlink: /home/arnab/ros2_ws/install/robot_hw/share/robot_hw//config/hw_config.yaml
+-- Up-to-date symlink: /home/arnab/ros2_ws/install/robot_hw/lib/robot_hw/encoder_publisher
+-- Up-to-date symlink: /home/arnab/ros2_ws/install/robot_hw/lib/robot_hw/motor_controller_openloop
+-- Up-to-date symlink: /home/arnab/ros2_ws/install/robot_hw/lib/robot_hw/odom_publisher_node
+-- Up-to-date symlink: /home/arnab/ros2_ws/install/robot_hw/lib/robot_hw/motor_controller_pid
+-- Up-to-date symlink: /home/arnab/ros2_ws/install/robot_hw/lib/robot_hw/rpm_test
+-- Up-to-date symlink: /home/arnab/ros2_ws/install/robot_hw/share/ament_index/resource_index/package_run_dependencies/robot_hw
+-- Up-to-date symlink: /home/arnab/ros2_ws/install/robot_hw/share/ament_index/resource_index/parent_prefix_path/robot_hw
+-- Up-to-date symlink: /home/arnab/ros2_ws/install/robot_hw/share/robot_hw/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/arnab/ros2_ws/install/robot_hw/share/robot_hw/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/arnab/ros2_ws/install/robot_hw/share/robot_hw/environment/path.sh
+-- Up-to-date symlink: /home/arnab/ros2_ws/install/robot_hw/share/robot_hw/environment/path.dsv
+-- Up-to-date symlink: /home/arnab/ros2_ws/install/robot_hw/share/robot_hw/local_setup.bash
+-- Up-to-date symlink: /home/arnab/ros2_ws/install/robot_hw/share/robot_hw/local_setup.sh
+-- Up-to-date symlink: /home/arnab/ros2_ws/install/robot_hw/share/robot_hw/local_setup.zsh
+-- Up-to-date symlink: /home/arnab/ros2_ws/install/robot_hw/share/robot_hw/local_setup.dsv
+-- Symlinking: /home/arnab/ros2_ws/install/robot_hw/share/robot_hw/package.dsv
+-- Up-to-date symlink: /home/arnab/ros2_ws/install/robot_hw/share/ament_index/resource_index/packages/robot_hw
+-- Up-to-date symlink: /home/arnab/ros2_ws/install/robot_hw/share/robot_hw/cmake/robot_hwConfig.cmake
+-- Up-to-date symlink: /home/arnab/ros2_ws/install/robot_hw/share/robot_hw/cmake/robot_hwConfig-version.cmake
+-- Up-to-date symlink: /home/arnab/ros2_ws/install/robot_hw/share/robot_hw/package.xml

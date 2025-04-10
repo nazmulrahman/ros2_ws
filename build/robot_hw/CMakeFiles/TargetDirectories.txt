@@ -5,6 +5,7 @@
 /home/arnab/ros2_ws/build/robot_hw/CMakeFiles/odom_publisher_node.dir
 /home/arnab/ros2_ws/build/robot_hw/CMakeFiles/motor_controller_pid.dir
 /home/arnab/ros2_ws/build/robot_hw/CMakeFiles/rpm_test.dir
+/home/arnab/ros2_ws/build/robot_hw/CMakeFiles/imu_publisher.dir
 /home/arnab/ros2_ws/build/robot_hw/CMakeFiles/test.dir
 /home/arnab/ros2_ws/build/robot_hw/CMakeFiles/edit_cache.dir
 /home/arnab/ros2_ws/build/robot_hw/CMakeFiles/rebuild_cache.dir

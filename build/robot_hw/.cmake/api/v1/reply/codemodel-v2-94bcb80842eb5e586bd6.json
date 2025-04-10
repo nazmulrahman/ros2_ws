@@ -1,0 +1,124 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-0daa8c1987116b0fa902.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "robot_hw",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "encoder_publisher::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-encoder_publisher-616a86efcd693517d2ee.json",
+					"name" : "encoder_publisher",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "imu_publisher::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-imu_publisher-57be47e714fe7ce34a5a.json",
+					"name" : "imu_publisher",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "motor_controller_openloop::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-motor_controller_openloop-e21172141b6ac7469eee.json",
+					"name" : "motor_controller_openloop",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "motor_controller_pid::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-motor_controller_pid-63e2c439bed752d557f1.json",
+					"name" : "motor_controller_pid",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "odom_publisher_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-odom_publisher_node-e64ad0999e7a6583be6e.json",
+					"name" : "odom_publisher_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_hw_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_hw_uninstall-5d13ca97de392aafbfe4.json",
+					"name" : "robot_hw_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rpm_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rpm_test-1f9435f382159e3998d2.json",
+					"name" : "rpm_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-a9875d0022d714b27a87.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/arnab/ros2_ws/build/robot_hw",
+		"source" : "/home/arnab/ros2_ws/src/robot_hw"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

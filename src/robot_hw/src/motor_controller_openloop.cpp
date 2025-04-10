@@ -66,14 +66,14 @@ private:
         int left_pwm = rpm_to_pwm(left_rpm);
         int right_pwm = rpm_to_pwm(right_rpm);
 
-        std::cout << "LEFTPWM: " << left_pwm << " RIGHTPWM: " << right_pwm;
+        RCLCPP_INFO(this->get_logger(), "LEFTPWM: %d", left_pwm);
+        RCLCPP_INFO(this->get_logger(), "RIGHTPWM: %d", right_pwm);
+
 
         if (!arduino_.connected()) {
             RCLCPP_ERROR(this->get_logger(), "Lost connection to Arduino!");
             return;
         }
-
-        
 
         arduino_.set_motor_values_ol(left_pwm, right_pwm); // Call function without checking return value
 
